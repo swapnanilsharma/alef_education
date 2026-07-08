@@ -16,6 +16,7 @@ from app.ingestion.embedding_chunker import build_embedding_chunks
 
 
 def evaluate(extracted_json_path: Path, show_examples: int) -> int:
+    """Evaluate chunking quality and print summary statistics."""
     if not extracted_json_path.exists():
         print(f"ERROR: file not found: {extracted_json_path}")
         return 1
@@ -63,9 +64,7 @@ def evaluate(extracted_json_path: Path, show_examples: int) -> int:
 
 
 def main() -> int:
-    """
-    Command-line entry point for chunking evaluation.
-    """
+    """Command-line entry point for chunking evaluation."""
     parser = argparse.ArgumentParser(
         description="Evaluate chunking output for extracted PDF JSON"
     )
