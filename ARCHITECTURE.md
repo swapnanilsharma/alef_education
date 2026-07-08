@@ -18,56 +18,58 @@ Main components:
 - Orchestration: LangGraph workflow in `app/qa/graph.py`.
 - UI: Streamlit client in `streamlit_app.py`.
 
-## Architecture Diagram (PlantUML)
-```plantuml
-@startuml
-title AI Learning Assistant - Runtime Architecture
+## Architecture Diagram (GitHub Rendered)
+GitHub Markdown does not render PlantUML blocks by default. The equivalent Mermaid sequence below renders directly on GitHub.
 
-actor Student
-participant "Streamlit UI\n(streamlit_app.py)" as UI
-participant "FastAPI\n(app/main.py)" as API
-participant "Ingest Router\n/app/routers/ingest.py" as INGEST
-participant "QA Router\n/app/routers/qa.py" as QA
-participant "PDF Extractor + Cleaner\napp/ingestion" as EXTRACT
-participant "Semantic Chunker\nembedding_chunker.py" as CHUNKER
-participant "Embedding Service\nBedrock Titan" as EMBED
-database "FAISS Index\nvectorstores/*.faiss" as FAISS
-database "Chunk Metadata\nvectorstores/*.metadata.json" as META
-participant "LangGraph QA\napp/qa/graph.py" as GRAPH
-participant "LLM Service\nBedrock Nova" as LLM
-database "Session Store\noutputs/qa_sessions.sqlite3" as SESS
+```mermaid
+sequenceDiagram
+	actor Student
+	participant UI as Streamlit UI\n(streamlit_app.py)
+	participant API as FastAPI\n(app/main.py)
+	participant INGEST as Ingest Router\n/app/routers/ingest.py
+	participant QA as QA Router\n/app/routers/qa.py
+	participant EXTRACT as PDF Extractor + Cleaner\napp/ingestion
+	participant CHUNKER as Semantic Chunker\nembedding_chunker.py
+	participant EMBED as Embedding Service\nBedrock Titan
+	participant FAISS as FAISS Index\nvectorstores/*.faiss
+	participant META as Chunk Metadata\nvectorstores/*.metadata.json
+	participant GRAPH as LangGraph QA\napp/qa/graph.py
+	participant LLM as LLM Service\nBedrock Nova
+	participant SESS as Session Store\noutputs/qa_sessions.sqlite3
 
-== Ingest Path ==
-Student -> UI: Upload PDF
-UI -> API: POST /ingest (file)
-API -> INGEST: route request
-INGEST -> EXTRACT: extract and clean pages
-EXTRACT --> INGEST: ExtractedPdf
-INGEST -> CHUNKER: build semantic chunks
-CHUNKER --> INGEST: chunks with page ranges/spans
-INGEST -> EMBED: embed chunk texts
-EMBED --> INGEST: vectors
-INGEST -> FAISS: persist index
-INGEST -> META: persist chunk metadata
-INGEST --> API: IngestResponse
-API --> UI: status + artifact paths
+	rect rgb(245, 250, 255)
+		note over Student,UI: Ingest Path
+		Student->>UI: Upload PDF
+		UI->>API: POST /ingest (file)
+		API->>INGEST: route request
+		INGEST->>EXTRACT: extract and clean pages
+		EXTRACT-->>INGEST: ExtractedPdf
+		INGEST->>CHUNKER: build semantic chunks
+		CHUNKER-->>INGEST: chunks with page ranges/spans
+		INGEST->>EMBED: embed chunk texts
+		EMBED-->>INGEST: vectors
+		INGEST->>FAISS: persist index
+		INGEST->>META: persist chunk metadata
+		INGEST-->>API: IngestResponse
+		API-->>UI: status + artifact paths
+	end
 
-== Ask Path ==
-Student -> UI: Ask question
-UI -> API: POST /ask
-API -> QA: route request
-QA -> GRAPH: run QA workflow
-GRAPH -> SESS: load recent turns
-GRAPH -> EMBED: embed query
-GRAPH -> FAISS: similarity search
-GRAPH -> META: load chunk metadata
-GRAPH -> LLM: safety + answer synthesis
-GRAPH -> SESS: save turn/checkpoint
-GRAPH --> QA: AskResponse (answer + sources)
-QA --> API: response
-API --> UI: answer + citations
-
-@enduml
+	rect rgb(245, 255, 245)
+		note over Student,UI: Ask Path
+		Student->>UI: Ask question
+		UI->>API: POST /ask
+		API->>QA: route request
+		QA->>GRAPH: run QA workflow
+		GRAPH->>SESS: load recent turns
+		GRAPH->>EMBED: embed query
+		GRAPH->>FAISS: similarity search
+		GRAPH->>META: load chunk metadata
+		GRAPH->>LLM: safety + answer synthesis
+		GRAPH->>SESS: save turn/checkpoint
+		GRAPH-->>QA: AskResponse (answer + sources)
+		QA-->>API: response
+		API-->>UI: answer + citations
+	end
 ```
 
 ## End-to-End Request Lifecycles
