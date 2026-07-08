@@ -18,6 +18,89 @@ Main components:
 - Orchestration: LangGraph workflow in `app/qa/graph.py`.
 - UI: Streamlit client in `streamlit_app.py`.
 
+## Architecture Diagram (PlantUML)
+```plantuml
+@startuml
+title AI Learning Assistant - Runtime Architecture
+
+actor Student
+participant "Streamlit UI\n(streamlit_app.py)" as UI
+participant "FastAPI\n(app/main.py)" as API
+participant "Ingest Router\n/app/routers/ingest.py" as INGEST
+participant "QA Router\n/app/routers/qa.py" as QA
+participant "PDF Extractor + Cleaner\napp/ingestion" as EXTRACT
+participant "Semantic Chunker\nembedding_chunker.py" as CHUNKER
+participant "Embedding Service\nBedrock Titan" as EMBED
+database "FAISS Index\nvectorstores/*.faiss" as FAISS
+database "Chunk Metadata\nvectorstores/*.metadata.json" as META
+participant "LangGraph QA\napp/qa/graph.py" as GRAPH
+participant "LLM Service\nBedrock Nova" as LLM
+database "Session Store\noutputs/qa_sessions.sqlite3" as SESS
+
+== Ingest Path ==
+Student -> UI: Upload PDF
+UI -> API: POST /ingest (file)
+API -> INGEST: route request
+INGEST -> EXTRACT: extract and clean pages
+EXTRACT --> INGEST: ExtractedPdf
+INGEST -> CHUNKER: build semantic chunks
+CHUNKER --> INGEST: chunks with page ranges/spans
+INGEST -> EMBED: embed chunk texts
+EMBED --> INGEST: vectors
+INGEST -> FAISS: persist index
+INGEST -> META: persist chunk metadata
+INGEST --> API: IngestResponse
+API --> UI: status + artifact paths
+
+== Ask Path ==
+Student -> UI: Ask question
+UI -> API: POST /ask
+API -> QA: route request
+QA -> GRAPH: run QA workflow
+GRAPH -> SESS: load recent turns
+GRAPH -> EMBED: embed query
+GRAPH -> FAISS: similarity search
+GRAPH -> META: load chunk metadata
+GRAPH -> LLM: safety + answer synthesis
+GRAPH -> SESS: save turn/checkpoint
+GRAPH --> QA: AskResponse (answer + sources)
+QA --> API: response
+API --> UI: answer + citations
+
+@enduml
+```
+
+## End-to-End Request Lifecycles
+
+### Ingest lifecycle
+1. Client uploads PDF bytes to `/ingest`.
+2. PDF is parsed page-by-page and normalized for downstream retrieval.
+3. Semantic chunking builds coherent chunks across page boundaries when needed.
+4. Embeddings are generated for each chunk.
+5. FAISS index and metadata JSON are stored locally.
+6. API returns index and metadata artifact locations.
+
+### Ask lifecycle
+1. Client sends `student_id`, `question`, `grade_level` to `/ask`.
+2. LangGraph executes safety classification before retrieval.
+3. Query embedding is computed; top-k chunks are retrieved from FAISS.
+4. Confidence gating decides whether context is sufficient.
+5. LLM generates concise grounded answer using retrieved chunks.
+6. Sources are returned with page attribution (`page`, `page_start`, `page_end`).
+7. Session state and checkpoints are persisted.
+
+## Data Contracts and Source Attribution
+
+### Why source metadata is split into `page` and page ranges
+- `page` is preserved for backward compatibility with existing clients.
+- `page_start` and `page_end` capture cross-page chunk provenance.
+- `source_spans` in chunk metadata retain per-page offset traceability.
+
+### Citation integrity strategy
+- Answer synthesis prompt explicitly instructs no invented facts/citations.
+- Retrieved source IDs are created only from persisted chunk metadata.
+- If retrieval confidence is low, system returns insufficient-context response.
+
 ## Design Choices
 
 ### 1) Semantic chunking with page attribution
@@ -44,6 +127,9 @@ Why:
 Trade-off:
 - No built-in filtering, hybrid search, or reranking unless explicitly added.
 
+Alternative considered:
+- Managed vector databases (OpenSearch/Pinecone/Weaviate) were not chosen for this assignment to keep setup local and reproducible.
+
 ### 3) LangGraph for QA orchestration
 Choice:
 - Use a graph workflow with explicit steps: safety classification, retrieval, confidence gating, answer generation, and logging.
@@ -54,6 +140,9 @@ Why:
 
 Trade-off:
 - Slightly more framework complexity than a single function pipeline.
+
+Alternative considered:
+- A linear service method is simpler initially but harder to extend safely with policy and evaluation gates.
 
 ### 4) Strict source-grounded answering
 Choice:
@@ -77,6 +166,22 @@ Artifacts:
 - Cleaned extraction JSON in `outputs/`.
 - Vector index + metadata in `vectorstores/`.
 
+## Retrieval and Generation Strategy
+
+### Current strategy
+- Dense retrieval via Bedrock embeddings + FAISS cosine-equivalent search (L2-normalized inner product).
+- Top-k chunk selection followed by confidence thresholding.
+- Prompted grounded generation with explicit insufficiency behavior.
+
+### Why this is practical
+- Minimal infrastructure overhead.
+- Fast local artifact reads.
+- Good baseline quality once chunking is semantic.
+
+### Known limitations
+- Keyword-only edge cases can be missed without lexical retrieval.
+- No reranker means final ordering relies on embedding similarity only.
+
 ## Failure Modes and Handling
 
 ### Ingest-time failures
@@ -91,6 +196,11 @@ Artifacts:
 - Invalid request payload -> `400`.
 - Retrieval/generation runtime failures -> `502`.
 
+### External dependency failures
+- Bedrock credential/config issues -> surfaced as runtime failures.
+- Transient provider latency/errors -> currently fail-fast at API layer.
+- Mitigation path: retry policy, circuit breaking, and deterministic fallback mode for tests.
+
 ### Quality-related failure modes
 - Noisy OCR-like pages may degrade chunking.
 - Weak heading detection can reduce source title quality.
@@ -103,17 +213,27 @@ Artifacts:
 - Keep local FAISS and file-based artifacts.
 - Add background ingest workers if upload volume grows.
 - Cache/reuse embedding clients to reduce initialization overhead.
+- Add async job status endpoint for long-running ingest operations.
 
 ### Mid-term
 - Partition indexes per document/course and route by namespace.
 - Add hybrid retrieval (keyword + vector) and optional reranking.
 - Add deterministic mock mode for test and CI runs.
+- Add offline evaluation harness and retrieval regression suite.
 
 ### Larger scale
 - Replace local artifacts with object storage + managed vector store.
 - Move session state and checkpoints to managed DB.
 - Introduce queue-based ingestion and horizontal API workers.
 - Add tracing and evaluation dashboards for retrieval quality and safety rates.
+
+## Testing and Evaluation Notes
+- Unit and integration test coverage should target:
+	- chunk boundary correctness,
+	- citation/page attribution integrity,
+	- safety routing behavior,
+	- insufficient-context behavior.
+- A deterministic evaluation script is included to validate chunk metadata quality without external API calls.
 
 ## Security and Operational Notes
 - Do not store API keys in source.
