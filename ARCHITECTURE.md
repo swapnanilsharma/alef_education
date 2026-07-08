@@ -72,6 +72,66 @@ sequenceDiagram
 	end
 ```
 
+## Component Diagram (Mermaid)
+This static view shows the major modules and data stores and how they connect.
+
+```mermaid
+flowchart LR
+	UI[Streamlit UI\nstreamlit_app.py]
+
+	subgraph API[FastAPI Service]
+		MAIN[app/main.py]
+		R_HEALTH[/GET /health/]
+		R_INGEST[/POST /ingest/]
+		R_ASK[/POST /ask/]
+	end
+
+	subgraph ING[Ingestion Layer]
+		PDFX[pdf_extractor.py]
+		CLEAN[text_cleaner.py]
+		CHUNK[embedding_chunker.py]
+		PIPE[embedding_pipeline.py]
+	end
+
+	subgraph RET[Retrieval Layer]
+		EMBED[bedrock_embeddings.py]
+		VSTORE[vector_store.py]
+	end
+
+	subgraph QA[QA Orchestration]
+		GRAPH[qa/graph.py]
+		SYNTH[answer_synthesizer.py]
+		SESS[session_store.py]
+	end
+
+	OUT[(outputs/*.json)]
+	FAISS[(vectorstores/*.faiss)]
+	META[(vectorstores/*.metadata.json)]
+	SQLITE[(outputs/qa_sessions.sqlite3)]
+	BEDROCK[(AWS Bedrock)]
+
+	UI --> MAIN
+	MAIN --> R_HEALTH
+	MAIN --> R_INGEST
+	MAIN --> R_ASK
+
+	R_INGEST --> PDFX --> CLEAN --> CHUNK --> PIPE
+	PIPE --> EMBED
+	PIPE --> VSTORE
+	PIPE --> OUT
+	VSTORE --> FAISS
+	VSTORE --> META
+
+	R_ASK --> GRAPH
+	GRAPH --> EMBED
+	GRAPH --> VSTORE
+	GRAPH --> SYNTH
+	GRAPH --> SESS
+	SYNTH --> BEDROCK
+	EMBED --> BEDROCK
+	SESS --> SQLITE
+```
+
 ## End-to-End Request Lifecycles
 
 ### Ingest lifecycle
@@ -90,6 +150,85 @@ sequenceDiagram
 5. LLM generates concise grounded answer using retrieved chunks.
 6. Sources are returned with page attribution (`page`, `page_start`, `page_end`).
 7. Session state and checkpoints are persisted.
+
+## LangGraph Workflow Details
+
+The QA orchestration in `app/qa/graph.py` is implemented as a state graph with guarded transitions.
+
+```mermaid
+flowchart TD
+	A[Start: safety_step] --> B{Safety result}
+	B -->|blocked| Z1[End\nReturn blocked response]
+	B -->|off_topic| Z2[End\nReturn off-topic response]
+	B -->|safe| C[retrieve_step\nEmbed query + FAISS search\nBuild sources]
+
+	C --> D[confidence_step\nCheck matches and top_score]
+	D -->|no matches| Z3[End\ninsufficient response]
+	D -->|score below threshold| Z4[End\ninsufficient response]
+	D -->|sufficient confidence| E[answer_step\nSynthesize final answer]
+
+	E --> F[eval_log_step\nLog quality metrics]
+	F --> G[End]
+```
+
+Mermaid state-machine view of the same logic:
+
+```mermaid
+stateDiagram-v2
+	[*] --> safety_step
+
+	safety_step --> retrieve_step: safe
+	safety_step --> blocked_end: blocked
+	safety_step --> off_topic_end: off_topic
+
+	retrieve_step --> confidence_step
+
+	confidence_step --> answer_step: sufficient confidence
+	confidence_step --> insufficient_end: no matches
+	confidence_step --> insufficient_end: score < MIN_RETRIEVAL_SCORE
+
+	answer_step --> eval_log_step
+	eval_log_step --> [*]
+
+	blocked_end --> [*]
+	off_topic_end --> [*]
+	insufficient_end --> [*]
+```
+
+### Node responsibilities
+
+1. `safety_step`
+- Classifies request as `safe`, `off_topic`, or `blocked`.
+- Short-circuits immediately for blocked or off-topic requests.
+
+2. `retrieve_step`
+- Embeds the user query.
+- Searches FAISS with configured `top_k`.
+- Builds source objects from retrieved chunk metadata.
+- Computes `top_score` used by confidence gating.
+
+3. `confidence_step`
+- Returns `insufficient` when there are no matches.
+- Returns `insufficient` when `top_score` is below `MIN_RETRIEVAL_SCORE`.
+- Only allows answer generation when retrieval confidence is acceptable.
+
+4. `answer_step`
+- Calls the answer synthesizer with question, grade level, retrieved matches, and recent session history.
+
+5. `eval_log_step`
+- Emits observability metrics (status, top score, match count, answer length).
+
+### Why this graph structure
+
+- Safety-first routing avoids expensive retrieval/generation for requests that should be blocked or redirected.
+- Confidence gating prevents hallucination-prone answers when context is weak.
+- Explicit transitions make behavior easy to test and reason about.
+
+### Session behavior around the graph
+
+- Before invocation: load/create thread and fetch recent turns.
+- After invocation: persist final turn and checkpoint state.
+- This enables lightweight continuity per student while keeping the graph execution stateless per request.
 
 ## Data Contracts and Source Attribution
 
