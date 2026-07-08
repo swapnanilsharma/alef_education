@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
+from typing import Any
 
 import faiss
 import numpy as np
@@ -52,7 +53,7 @@ def save_faiss_index(
     vector_array = np.ascontiguousarray(np.asarray(embeddings, dtype="float32"))
     faiss.normalize_L2(x=vector_array)
 
-    index = faiss.IndexFlatIP(vector_array.shape[1])
+    index: Any = faiss.IndexFlatIP(vector_array.shape[1])
     index.add(vector_array)
 
     artifact_stem = build_artifact_stem(output_dir, base_name)
@@ -162,11 +163,15 @@ def search_faiss_index(
             continue
 
         chunk = chunks[int(label)]
+        page_start = chunk.get("page_start", chunk.get("page_number"))
+        page_end = chunk.get("page_end", chunk.get("page_number", page_start))
         matches.append(
             AskMatch(
                 chunk_id=chunk["chunk_id"],
-                page_number=chunk["page_number"],
+                page_start=page_start,
+                page_end=page_end,
                 section_heading=chunk.get("section_heading", "Unknown section"),
+                chunk_kind=chunk.get("chunk_kind", "paragraph"),
                 score=float(score),
                 text=chunk["text"],
             )

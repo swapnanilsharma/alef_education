@@ -77,13 +77,28 @@ def show_sources(sources: list[dict[str, Any]]) -> None:
     st.subheader("Sources")
     for idx, source in enumerate(sources, start=1):
         title = source.get("title", "Unknown")
-        page = source.get("page", "?")
+        page = _format_source_page(source)
         source_id = source.get("source_id", "")
         excerpt = source.get("excerpt", "")
         with st.expander(f"{idx}. {title} (Page {page})", expanded=False):
             if source_id:
                 st.caption(source_id)
             st.write(excerpt)
+
+
+def _format_source_page(source: dict[str, Any]) -> str:
+    """Format either a single page or a page range for UI display."""
+    page = source.get("page")
+    if page is not None:
+        return str(page)
+
+    page_start = source.get("page_start")
+    page_end = source.get("page_end")
+    if page_start is None or page_end is None:
+        return "?"
+    if page_start == page_end:
+        return str(page_start)
+    return f"{page_start}-{page_end}"
 
 
 def main() -> None:

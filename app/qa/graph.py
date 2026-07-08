@@ -196,16 +196,22 @@ def _build_sources(matches: list[AskMatch], source_json: str) -> list[AskSource]
         source_json: JSON artifact path from metadata for source naming.
 
     Returns:
-        list[AskSource]: Source entries including page, title, and excerpt.
+        list[AskSource]: Source entries including page range, title, and excerpt.
     """
     source_name = Path(source_json).name if source_json else "source.pdf"
     sources: list[AskSource] = []
     for match in matches:
+        if match.page_start == match.page_end:
+            source_id = f"{source_name}#page={match.page_start}"
+        else:
+            source_id = f"{source_name}#page={match.page_start}-{match.page_end}"
         sources.append(
             AskSource(
-                source_id=f"{source_name}#page={match.page_number}",
+                source_id=source_id,
                 title=match.section_heading,
-                page=match.page_number,
+                page=match.page_start,
+                page_start=match.page_start,
+                page_end=match.page_end,
                 excerpt=match.text[:MAX_SOURCE_EXCERPT_CHARS],
             )
         )

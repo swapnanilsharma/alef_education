@@ -1,0 +1,3010 @@
+{
+  "source_json": "outputs/A_Quick_Algebra_Review_20260708T175625Z.json",
+  "model_id": "amazon.titan-embed-text-v2:0",
+  "metric": "inner_product",
+  "normalized": true,
+  "dimension": 1024,
+  "chunk_count": 33,
+  "chunks": [
+    {
+      "chunk_id": "chunk-1",
+      "page_start": 1,
+      "page_end": 2,
+      "section_heading": "A Quick Algebra Review",
+      "chunk_kind": "list",
+      "text": "A Quick Algebra Review\n\n1. Simplifying Expressions\n2. Solving Equations\n3. Problem Solving\n4. Inequalities\n5. Absolute Values\n6. Linear Equations\n7. Systems of Equations\n8. Laws of Exponents\n9. Quadratics\n10. Rationals\n11. Radicals\n\nSimplifying Expressions\n\nAn expression is a mathematical “phrase.” Expressions contain numbers\nand variables, but not an equal sign. An equation has an “equal” sign. For\n\nexample:\n\nExpression:\n\nEquation:\n\n5 + 3\n5 + 3 = 8\nx + 3\nx + 3 = 8\n(x + 4)(x – 2)\n(x + 4)(x – 2) = 10\nx² + 5x + 6\nx² + 5x + 6 = 0\nx – 8\nx – 8 > 3\n\nWhen we simplify an expression, we work until there are as few terms as\npossible. This process makes the expression easier to use, (that’s why it’s\ncalled “simplify”). The first thing we want to do when simplifying an\nexpression is to combine like terms.\n\nFor example:\n\nNow you try: x² + 5x + 3x² + x³ - 5 + 3\n\n[You should get x³ + 4x² + 5x – 2]\n\nOrder of Operations\n\nPEMDAS – Please Excuse My Dear Aunt Sally, remember that from\nAlgebra class? It tells the order in which we can complete operations when\nsolving an equation. First, complete any work inside PARENTHESIS, then\nevaluate EXPONENTS if there are any. Next MULTIPLY or DIVIDE\nnumbers before ADDING or SUBTRACTING. For example:\n\nInside the parenthesis,\nlook for more order of\noperation rules -",
+      "source_spans": [
+        {
+          "page_number": 1,
+          "start_offset": 0,
+          "end_offset": 23
+        },
+        {
+          "page_number": 1,
+          "start_offset": 24,
+          "end_offset": 232
+        },
+        {
+          "page_number": 1,
+          "start_offset": 233,
+          "end_offset": 257
+        },
+        {
+          "page_number": 1,
+          "start_offset": 258,
+          "end_offset": 403
+        },
+        {
+          "page_number": 1,
+          "start_offset": 403,
+          "end_offset": 412
+        },
+        {
+          "page_number": 1,
+          "start_offset": 413,
+          "end_offset": 425
+        },
+        {
+          "page_number": 1,
+          "start_offset": 426,
+          "end_offset": 436
+        },
+        {
+          "page_number": 1,
+          "start_offset": 437,
+          "end_offset": 548
+        },
+        {
+          "page_number": 1,
+          "start_offset": 549,
+          "end_offset": 803
+        },
+        {
+          "page_number": 2,
+          "start_offset": 0,
+          "end_offset": 13
+        },
+        {
+          "page_number": 2,
+          "start_offset": 14,
+          "end_offset": 54
+        },
+        {
+          "page_number": 2,
+          "start_offset": 55,
+          "end_offset": 90
+        },
+        {
+          "page_number": 2,
+          "start_offset": 91,
+          "end_offset": 111
+        },
+        {
+          "page_number": 2,
+          "start_offset": 112,
+          "end_offset": 432
+        },
+        {
+          "page_number": 2,
+          "start_offset": 433,
+          "end_offset": 498
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-2",
+      "page_start": 2,
+      "page_end": 3,
+      "section_heading": "A Quick Algebra Review",
+      "chunk_kind": "paragraph",
+      "text": "PEMDAS – Please Excuse My Dear Aunt Sally, remember that from\nAlgebra class? It tells the order in which we can complete operations when\nsolving an equation. First, complete any work inside PARENTHESIS, then\nevaluate EXPONENTS if there are any. Next MULTIPLY or DIVIDE\nnumbers before ADDING or SUBTRACTING. For example:\n\nInside the parenthesis,\nlook for more order of\noperation rules -\n\nPEMDAS.\nWe don’t have any\nexponents, but we do\nneed to multiply\nbefore we subtract,\nthen add inside the\nparentheses before we\nmultiply by negative 2\non the outside.\n\nSimplify:\n\n-2[3 - (-2)(6)]\n\n= -2[3-(-12)]\n\n= -2[3+12]\n\n= -2[15]\n\n= -30\n\nSimplify:\n\nx² + 10x – 6 – 5x + 4\n\n= x² + 5x – 6 + 4\n\n= x² + 5x – 2\nThere are many terms to look\nat! Let’s start with x². There\nare no other terms with x² in\nthem, so we move on. 10x\nand 5x are like terms, so we\nadd their coefficients\ntogether. 10 + (-5) = 5, so we\nwrite 5x. -6 and 4 are also\nlike terms, so we can combine\nthem to get -2. Isn’t the\nsimplified expression much\nnicer?\n\nLet’s try another one…\n\nPractice makes perfect…\n\nNow you try: 2x + 4 [2 –(5x – 3)]\n\n[you should get -18x +20]\n\nSimplify:\n\n(-4)2 + 2[12 + (3-5)]\n\n= (-4)2 + 2[12 + (-2)]\n\n= (-4)2 + 2[10]\n\n= 16 + 2[10]\n\n= 16 + 20\n\n= 36\nInside the parenthesis, look for\norder of operation rules -",
+      "source_spans": [
+        {
+          "page_number": 2,
+          "start_offset": 112,
+          "end_offset": 432
+        },
+        {
+          "page_number": 2,
+          "start_offset": 433,
+          "end_offset": 498
+        },
+        {
+          "page_number": 2,
+          "start_offset": 498,
+          "end_offset": 663
+        },
+        {
+          "page_number": 2,
+          "start_offset": 663,
+          "end_offset": 673
+        },
+        {
+          "page_number": 2,
+          "start_offset": 674,
+          "end_offset": 690
+        },
+        {
+          "page_number": 2,
+          "start_offset": 691,
+          "end_offset": 705
+        },
+        {
+          "page_number": 2,
+          "start_offset": 706,
+          "end_offset": 717
+        },
+        {
+          "page_number": 2,
+          "start_offset": 718,
+          "end_offset": 727
+        },
+        {
+          "page_number": 2,
+          "start_offset": 728,
+          "end_offset": 734
+        },
+        {
+          "page_number": 2,
+          "start_offset": 734,
+          "end_offset": 744
+        },
+        {
+          "page_number": 2,
+          "start_offset": 745,
+          "end_offset": 767
+        },
+        {
+          "page_number": 2,
+          "start_offset": 768,
+          "end_offset": 786
+        },
+        {
+          "page_number": 2,
+          "start_offset": 787,
+          "end_offset": 1116
+        },
+        {
+          "page_number": 3,
+          "start_offset": 0,
+          "end_offset": 23
+        },
+        {
+          "page_number": 3,
+          "start_offset": 24,
+          "end_offset": 48
+        },
+        {
+          "page_number": 3,
+          "start_offset": 49,
+          "end_offset": 83
+        },
+        {
+          "page_number": 3,
+          "start_offset": 84,
+          "end_offset": 110
+        },
+        {
+          "page_number": 3,
+          "start_offset": 111,
+          "end_offset": 121
+        },
+        {
+          "page_number": 3,
+          "start_offset": 122,
+          "end_offset": 144
+        },
+        {
+          "page_number": 3,
+          "start_offset": 145,
+          "end_offset": 168
+        },
+        {
+          "page_number": 3,
+          "start_offset": 169,
+          "end_offset": 185
+        },
+        {
+          "page_number": 3,
+          "start_offset": 186,
+          "end_offset": 199
+        },
+        {
+          "page_number": 3,
+          "start_offset": 200,
+          "end_offset": 210
+        },
+        {
+          "page_number": 3,
+          "start_offset": 211,
+          "end_offset": 276
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-3",
+      "page_start": 3,
+      "page_end": 3,
+      "section_heading": "A Quick Algebra Review",
+      "chunk_kind": "paragraph",
+      "text": "= (-4)2 + 2[12 + (-2)]\n\n= (-4)2 + 2[10]\n\n= 16 + 2[10]\n\n= 16 + 20\n\n= 36\nInside the parenthesis, look for\norder of operation rules -\n\nPEMDAS.\nWe need to subtract 5 from 3 then\nadd 12 inside the parentheses. This\ntakes care of the P in PEMDAS,\nnow for the E, Exponents. We\nsquare -4. Make sure to use (-4)2 if\nyou are relying on your calculator.\nIf you input -42 the calculator will\nevaluate the expression using\nPEMDAS. It will do the exponent\nfirst, then multiply by -1, giving\nyou -16, though we know the\nanswer is 16. Now we can multiply\nand then add to finish up.\n\nSimplify:\n\n(5a2 – 3a +1) – (2a2 – 4a + 6)\n\n= (5a2 – 3a +1) – 1(2a2 – 4a + 6)\n\n= (5a2 – 3a +1) – 1(2a2)–(-1)(- 4a )+(-1)( 6)\n\n= (5a2 – 3a +1) –2a2 + 4a – 6\n\n= 5a2 – 3a +1 –2a2 + 4a – 6\n\n= 3a2 + a - 5\nSince there are no like terms\ninside the parenthesis, we\nneed to distribute the negative\nsign and then see what we\nhave. There is really a -1\nthere but we’re basically lazy\nwhen it comes to the number\none and don’t always write it\n(since 1 times anything is\nitself). So we need to take -1\ntimes EVERYTHING in the\nparenthesis, not just the first\nterm. Once we have done\nthat, we can combine like\nterms and rewrite the\nexpression.",
+      "source_spans": [
+        {
+          "page_number": 3,
+          "start_offset": 145,
+          "end_offset": 168
+        },
+        {
+          "page_number": 3,
+          "start_offset": 169,
+          "end_offset": 185
+        },
+        {
+          "page_number": 3,
+          "start_offset": 186,
+          "end_offset": 199
+        },
+        {
+          "page_number": 3,
+          "start_offset": 200,
+          "end_offset": 210
+        },
+        {
+          "page_number": 3,
+          "start_offset": 211,
+          "end_offset": 276
+        },
+        {
+          "page_number": 3,
+          "start_offset": 276,
+          "end_offset": 710
+        },
+        {
+          "page_number": 3,
+          "start_offset": 710,
+          "end_offset": 720
+        },
+        {
+          "page_number": 3,
+          "start_offset": 721,
+          "end_offset": 752
+        },
+        {
+          "page_number": 3,
+          "start_offset": 753,
+          "end_offset": 787
+        },
+        {
+          "page_number": 3,
+          "start_offset": 788,
+          "end_offset": 834
+        },
+        {
+          "page_number": 3,
+          "start_offset": 835,
+          "end_offset": 865
+        },
+        {
+          "page_number": 3,
+          "start_offset": 866,
+          "end_offset": 894
+        },
+        {
+          "page_number": 3,
+          "start_offset": 895,
+          "end_offset": 1337
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-4",
+      "page_start": 3,
+      "page_end": 4,
+      "section_heading": "Solving Equations",
+      "chunk_kind": "paragraph",
+      "text": "= 3a2 + a - 5\nSince there are no like terms\ninside the parenthesis, we\nneed to distribute the negative\nsign and then see what we\nhave. There is really a -1\nthere but we’re basically lazy\nwhen it comes to the number\none and don’t always write it\n(since 1 times anything is\nitself). So we need to take -1\ntimes EVERYTHING in the\nparenthesis, not just the first\nterm. Once we have done\nthat, we can combine like\nterms and rewrite the\nexpression.\n\nSolving Equations\n\nAn equation has an equal sign. The goal of solving equations is to get the\nvariable by itself, to SOLVE for x =. In order to do this, we must “undo”\nwhat was done to the problem initially. Follow reverse order of operations –\nlook for addition/subtraction first, then multiplication/division, then\nexponents, and parenthesis. The important rule when solving an equation is\nto always do to one side of the equal sign what we do to the other.\n\nFor example\n\nYour Turn: 2(x -1) = -3\n\n(you should get x = -1/2)\n\nSolve:\nx + 9 = -6\n\n-9 -9\n\nx = -15\nTo solve an equation we need to get our\nvariable by itself. To “move” the 9 to the\nother side, we need to subtract 9 from\nboth sides of the equal sign, since 9 was\nadded to x in the original problem. Then\nwe have x + 9 – 9 = -6 – 9 so x + 0 = -15\nor just x = -15.",
+      "source_spans": [
+        {
+          "page_number": 3,
+          "start_offset": 895,
+          "end_offset": 1337
+        },
+        {
+          "page_number": 4,
+          "start_offset": 0,
+          "end_offset": 18
+        },
+        {
+          "page_number": 4,
+          "start_offset": 19,
+          "end_offset": 460
+        },
+        {
+          "page_number": 4,
+          "start_offset": 461,
+          "end_offset": 473
+        },
+        {
+          "page_number": 4,
+          "start_offset": 474,
+          "end_offset": 498
+        },
+        {
+          "page_number": 4,
+          "start_offset": 499,
+          "end_offset": 525
+        },
+        {
+          "page_number": 4,
+          "start_offset": 525,
+          "end_offset": 543
+        },
+        {
+          "page_number": 4,
+          "start_offset": 544,
+          "end_offset": 550
+        },
+        {
+          "page_number": 4,
+          "start_offset": 551,
+          "end_offset": 823
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-5",
+      "page_start": 4,
+      "page_end": 4,
+      "section_heading": "Solving Equations",
+      "chunk_kind": "equation_group",
+      "text": "x = -15\nTo solve an equation we need to get our\nvariable by itself. To “move” the 9 to the\nother side, we need to subtract 9 from\nboth sides of the equal sign, since 9 was\nadded to x in the original problem. Then\nwe have x + 9 – 9 = -6 – 9 so x + 0 = -15\nor just x = -15.\n\nSolve:\n5x – 7 = 2\n\n+7 +7\n\n5x = 9\n\n5x = 9\n5 5\n\nx = 9/5\nWhen the equations get more\ncomplicated, just remember to “undo”\nwhat was done to the problem initially\nusing PEMDAS rules BACKWARDS\nand move one thing at a time to leave the\nterm with the variable until the end.\nThey subtract 7; so we add 7 (to both\nsides). They multiply by 5; we divide by\nfive.\n\nSolve:\n7(x + 4) = 6x + 24\ndistribute\n\n7x + 28 = 6x + 24\n-28 - 28\n\n7x = 6x - 4\n-6x -6x\n\nx = -4\nWhen there are variables on both sides of\nthe equation, add or subtract to move\nthem to the same side, then get the term\nwith the variable by itself. Remember,\nwe can add together terms that are alike!",
+      "source_spans": [
+        {
+          "page_number": 4,
+          "start_offset": 551,
+          "end_offset": 823
+        },
+        {
+          "page_number": 4,
+          "start_offset": 823,
+          "end_offset": 841
+        },
+        {
+          "page_number": 4,
+          "start_offset": 842,
+          "end_offset": 848
+        },
+        {
+          "page_number": 4,
+          "start_offset": 849,
+          "end_offset": 856
+        },
+        {
+          "page_number": 4,
+          "start_offset": 857,
+          "end_offset": 868
+        },
+        {
+          "page_number": 4,
+          "start_offset": 869,
+          "end_offset": 1175
+        },
+        {
+          "page_number": 4,
+          "start_offset": 1175,
+          "end_offset": 1212
+        },
+        {
+          "page_number": 4,
+          "start_offset": 1213,
+          "end_offset": 1240
+        },
+        {
+          "page_number": 4,
+          "start_offset": 1241,
+          "end_offset": 1261
+        },
+        {
+          "page_number": 4,
+          "start_offset": 1262,
+          "end_offset": 1470
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-6",
+      "page_start": 4,
+      "page_end": 6,
+      "section_heading": "Problem Solving",
+      "chunk_kind": "paragraph",
+      "text": "x = -4\nWhen there are variables on both sides of\nthe equation, add or subtract to move\nthem to the same side, then get the term\nwith the variable by itself. Remember,\nwe can add together terms that are alike!\n\nProblem Solving\n\nMany people look at word problems and think, “I’m really bad at these!”\nBut once we accept them, they help us solve problems in life when the\nequation, numbers, and variables are not given to us. They help us THINK,\nlogically.\n\nOne of the challenging parts of solving word problems is that you to take a\nproblem given in written English and translate it into a mathematical\nequation. In other words, we turn words into numbers, variables, and\nmathematical symbols.\n\nThere are three important steps to “translating” a word problem into an\nequation we can work with:\n\nLet’s look at an example:\n\nThe fence around my rectangular back yard is 48 feet long. My yard\nis 3ft longer than twice the width. What is the width of my yard?\nWhat is the length?\n\nFirst, we have to make sure we understand the problem. So what’s going\non here? Drawing a picture often helps with this step.\n\nlength\n\nwidth\n\n1. Understand the problem\n2. Define the variables\n3. Write an equation\n\nYard\nWe know that the problem is\ndescribing a person’s\nrectangular yard. We also\nknow that one side is the\nwidth and the other side is the\nlength. The perimeter of\n(distance around) the yard is\n48ft. To arrive at that\nperimeter, we add length +\nlength + width + width, or\nuse the formula 2l + 2w = p\n(l = length, w = width, p =\nperimeter)\n\nNext, we have to define the variables:",
+      "source_spans": [
+        {
+          "page_number": 4,
+          "start_offset": 1262,
+          "end_offset": 1470
+        },
+        {
+          "page_number": 5,
+          "start_offset": 0,
+          "end_offset": 16
+        },
+        {
+          "page_number": 5,
+          "start_offset": 17,
+          "end_offset": 244
+        },
+        {
+          "page_number": 5,
+          "start_offset": 245,
+          "end_offset": 482
+        },
+        {
+          "page_number": 5,
+          "start_offset": 483,
+          "end_offset": 582
+        },
+        {
+          "page_number": 5,
+          "start_offset": 583,
+          "end_offset": 609
+        },
+        {
+          "page_number": 5,
+          "start_offset": 610,
+          "end_offset": 763
+        },
+        {
+          "page_number": 5,
+          "start_offset": 764,
+          "end_offset": 890
+        },
+        {
+          "page_number": 5,
+          "start_offset": 891,
+          "end_offset": 898
+        },
+        {
+          "page_number": 5,
+          "start_offset": 899,
+          "end_offset": 905
+        },
+        {
+          "page_number": 5,
+          "start_offset": 906,
+          "end_offset": 977
+        },
+        {
+          "page_number": 5,
+          "start_offset": 978,
+          "end_offset": 1316
+        },
+        {
+          "page_number": 6,
+          "start_offset": 0,
+          "end_offset": 39
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-7",
+      "page_start": 5,
+      "page_end": 7,
+      "section_heading": "Problem Solving",
+      "chunk_kind": "paragraph",
+      "text": "Yard\nWe know that the problem is\ndescribing a person’s\nrectangular yard. We also\nknow that one side is the\nwidth and the other side is the\nlength. The perimeter of\n(distance around) the yard is\n48ft. To arrive at that\nperimeter, we add length +\nlength + width + width, or\nuse the formula 2l + 2w = p\n(l = length, w = width, p =\nperimeter)\n\nNext, we have to define the variables:\n\nWe know the perimeter is\n2w + 3\n48ft, but we do not know the\nlength or width of the yard.\n\nLet’s have w = the width.\n\nWe find the length by\nmultiplying the width by 2\nand adding 3, so\nlength = 2w + 3. Let’s add\nthese labels to the picture.\n\nNow, we write an equation.\n\np = 2l + 2w\n\n48 = 2(2w + 3) + 2w\n\nTo solve the equation:\n\n48 = 2(2w + 3) + 2w\n\n48 = 4w + 6 + 2w\n\n48 = 6w + 6\n\n42 = 6w\n6 6\n\n7ft = w=width\n\nThe problem also states, “The\nlength of my yard is 3ft more\nthan twice the width.” This\nmeans that if I know the\nwidth, I can multiply it by 2\nand add 3 to determine the\nlength.\n\nYard\nTo write the equation we\nsubstitute our variables into the\nequation for the perimeter. The\nformula already calls for w, so we\ncan just leave that as is. Where it\ncalls for length, we can just plug\nin “2w + 3”. We already know\nour perimeter is 48ft, so we\nsubstitute that in for p.\nUse the distributive property to multiply 2 by 2w and 3.\n\nCombine like terms (4w and 2w).\n\nSubtract 6 from both sides to “undo” the addition.\n\nDivide by 6 on both sides to “undo” the multiplication.\n\nYou are left with a width of 7 ft. Now we need to find\nthe length.\n\nCheck to see that it works\n\n2(7) + 3\n14 + 3",
+      "source_spans": [
+        {
+          "page_number": 5,
+          "start_offset": 978,
+          "end_offset": 1316
+        },
+        {
+          "page_number": 6,
+          "start_offset": 0,
+          "end_offset": 39
+        },
+        {
+          "page_number": 6,
+          "start_offset": 40,
+          "end_offset": 130
+        },
+        {
+          "page_number": 6,
+          "start_offset": 131,
+          "end_offset": 157
+        },
+        {
+          "page_number": 6,
+          "start_offset": 158,
+          "end_offset": 280
+        },
+        {
+          "page_number": 6,
+          "start_offset": 281,
+          "end_offset": 308
+        },
+        {
+          "page_number": 6,
+          "start_offset": 309,
+          "end_offset": 321
+        },
+        {
+          "page_number": 6,
+          "start_offset": 322,
+          "end_offset": 342
+        },
+        {
+          "page_number": 6,
+          "start_offset": 343,
+          "end_offset": 366
+        },
+        {
+          "page_number": 6,
+          "start_offset": 367,
+          "end_offset": 387
+        },
+        {
+          "page_number": 6,
+          "start_offset": 388,
+          "end_offset": 405
+        },
+        {
+          "page_number": 6,
+          "start_offset": 406,
+          "end_offset": 418
+        },
+        {
+          "page_number": 6,
+          "start_offset": 419,
+          "end_offset": 431
+        },
+        {
+          "page_number": 6,
+          "start_offset": 432,
+          "end_offset": 446
+        },
+        {
+          "page_number": 6,
+          "start_offset": 447,
+          "end_offset": 625
+        },
+        {
+          "page_number": 6,
+          "start_offset": 626,
+          "end_offset": 969
+        },
+        {
+          "page_number": 6,
+          "start_offset": 970,
+          "end_offset": 1002
+        },
+        {
+          "page_number": 6,
+          "start_offset": 1003,
+          "end_offset": 1054
+        },
+        {
+          "page_number": 6,
+          "start_offset": 1055,
+          "end_offset": 1111
+        },
+        {
+          "page_number": 6,
+          "start_offset": 1112,
+          "end_offset": 1178
+        },
+        {
+          "page_number": 7,
+          "start_offset": 0,
+          "end_offset": 27
+        },
+        {
+          "page_number": 7,
+          "start_offset": 28,
+          "end_offset": 44
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-8",
+      "page_start": 6,
+      "page_end": 8,
+      "section_heading": "Inequalities",
+      "chunk_kind": "paragraph",
+      "text": "Divide by 6 on both sides to “undo” the multiplication.\n\nYou are left with a width of 7 ft. Now we need to find\nthe length.\n\nCheck to see that it works\n\n2(7) + 3\n14 + 3\n\n17ft = length\n\nYour turn:\n\nI have a box. The length of the box is 12 in. The height of the box is 5\nin. The box has a total volume of 360 in.2 What is the width of the box?\nNote: The formula for volume is V = lwh, where v = volume, l =\nlength, w = width, and h = height.\n\n(You should get w = 6in.)\n\nInequalities\n\nWe’ve all been taught little tricks to remember the inequality sign. For\n\nexample; when given x < 10, we know that x is less than ten because x has\nthe LITTLE side of the sign and 10 has the BIG side of the sign.\n\nSolving inequalities is similar to solving equations; what you do to one side\nof an inequality, we must do to the other. If we are given x + 7 > 13 and\nasked to solve, we would undo the addition on the left side by subtracting 7\nfrom both sides. We would then be left with x > 6, which is our answer.\n\nSuppose we were given ¼ x < 2. To undo the division, we would multiply\nboth sides by 4. The result would be x < 8.\n\nBut if we had – ¼ x < 2, we would multiply by both sided of the inequality\nby -4 and the rule is that when multiplying (or dividing) by a negative\nnumber, we must always flip the sign of an inequality. So we would get\nx > 2.\n\nSubstitute our newly found width and simplify using\norder of operations \n\nSo now we know that the yard is 7ft wide and 17ft long.\n\nLet’s practice:",
+      "source_spans": [
+        {
+          "page_number": 6,
+          "start_offset": 1055,
+          "end_offset": 1111
+        },
+        {
+          "page_number": 6,
+          "start_offset": 1112,
+          "end_offset": 1178
+        },
+        {
+          "page_number": 7,
+          "start_offset": 0,
+          "end_offset": 27
+        },
+        {
+          "page_number": 7,
+          "start_offset": 28,
+          "end_offset": 44
+        },
+        {
+          "page_number": 7,
+          "start_offset": 45,
+          "end_offset": 59
+        },
+        {
+          "page_number": 7,
+          "start_offset": 60,
+          "end_offset": 71
+        },
+        {
+          "page_number": 7,
+          "start_offset": 72,
+          "end_offset": 316
+        },
+        {
+          "page_number": 7,
+          "start_offset": 317,
+          "end_offset": 343
+        },
+        {
+          "page_number": 7,
+          "start_offset": 344,
+          "end_offset": 357
+        },
+        {
+          "page_number": 7,
+          "start_offset": 358,
+          "end_offset": 431
+        },
+        {
+          "page_number": 7,
+          "start_offset": 431,
+          "end_offset": 570
+        },
+        {
+          "page_number": 7,
+          "start_offset": 571,
+          "end_offset": 872
+        },
+        {
+          "page_number": 7,
+          "start_offset": 873,
+          "end_offset": 988
+        },
+        {
+          "page_number": 7,
+          "start_offset": 989,
+          "end_offset": 1214
+        },
+        {
+          "page_number": 7,
+          "start_offset": 1215,
+          "end_offset": 1289
+        },
+        {
+          "page_number": 7,
+          "start_offset": 1290,
+          "end_offset": 1345
+        },
+        {
+          "page_number": 8,
+          "start_offset": 0,
+          "end_offset": 16
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-9",
+      "page_start": 7,
+      "page_end": 9,
+      "section_heading": "Absolute Values",
+      "chunk_kind": "paragraph",
+      "text": "Substitute our newly found width and simplify using\norder of operations \n\nSo now we know that the yard is 7ft wide and 17ft long.\n\nLet’s practice:\n\nIt’s always good to check our answer. To do this, plug values in for x. Let’s\ntry 1, since it is greater than 0 and an easier number to work with. 1 – 5 is -\n4. -4 times -2 is -8.\nIs -8 < 10? You bet!\n\nYour turn: 4x + 2 > 10\n\n[You should get x > 2]\n\nAbsolute Values\n\nThe absolute value of a number is its distance from zero on the number line.\nSince we can’t have negative distance, absolute values are always positive.\n\n│5│= 5\n\n│-7│= 7\n\n│-8 + 2│= 6\n\nWhen solving absolute value equations, we must consider that the number\ninside could have been negative before you applied the absolute value!\n\nFor example:\n│x + 2│= 3\n\nx + 2 and x + 2\n\nWhen we take the absolute\nvalue, both are equal to 3.\n\nSo we end up with TWO\nSOLUTIONS for this\nequation.\n\nSolve:\n-2(x – 5) < 10\n-2 -2\n\nx – 5 > -5\n+ 5 + 5\n\nx > 0\nJust as with an equation, we start here by\ndividing both sides by -2. Since we are\ndividing by a negative, we must flip the\ninequality sign.\n\nNext, we add five to both sides and we\nare left with x > 0.\n\nx + 2 = 3 and x + 2 = -3\n-1 -1 -2 -2\nx = 1\nx = -5\n\nYour turn: │3x – 4│= 5\n\n[You should get x = -1/3 and x = 3]",
+      "source_spans": [
+        {
+          "page_number": 7,
+          "start_offset": 1215,
+          "end_offset": 1289
+        },
+        {
+          "page_number": 7,
+          "start_offset": 1290,
+          "end_offset": 1345
+        },
+        {
+          "page_number": 8,
+          "start_offset": 0,
+          "end_offset": 16
+        },
+        {
+          "page_number": 8,
+          "start_offset": 17,
+          "end_offset": 218
+        },
+        {
+          "page_number": 8,
+          "start_offset": 219,
+          "end_offset": 242
+        },
+        {
+          "page_number": 8,
+          "start_offset": 243,
+          "end_offset": 266
+        },
+        {
+          "page_number": 8,
+          "start_offset": 267,
+          "end_offset": 283
+        },
+        {
+          "page_number": 8,
+          "start_offset": 284,
+          "end_offset": 437
+        },
+        {
+          "page_number": 8,
+          "start_offset": 438,
+          "end_offset": 445
+        },
+        {
+          "page_number": 8,
+          "start_offset": 446,
+          "end_offset": 454
+        },
+        {
+          "page_number": 8,
+          "start_offset": 455,
+          "end_offset": 467
+        },
+        {
+          "page_number": 8,
+          "start_offset": 468,
+          "end_offset": 611
+        },
+        {
+          "page_number": 8,
+          "start_offset": 612,
+          "end_offset": 636
+        },
+        {
+          "page_number": 8,
+          "start_offset": 637,
+          "end_offset": 653
+        },
+        {
+          "page_number": 8,
+          "start_offset": 654,
+          "end_offset": 708
+        },
+        {
+          "page_number": 8,
+          "start_offset": 709,
+          "end_offset": 760
+        },
+        {
+          "page_number": 8,
+          "start_offset": 760,
+          "end_offset": 788
+        },
+        {
+          "page_number": 8,
+          "start_offset": 789,
+          "end_offset": 808
+        },
+        {
+          "page_number": 8,
+          "start_offset": 809,
+          "end_offset": 956
+        },
+        {
+          "page_number": 8,
+          "start_offset": 957,
+          "end_offset": 1016
+        },
+        {
+          "page_number": 9,
+          "start_offset": 0,
+          "end_offset": 50
+        },
+        {
+          "page_number": 9,
+          "start_offset": 51,
+          "end_offset": 74
+        },
+        {
+          "page_number": 9,
+          "start_offset": 75,
+          "end_offset": 111
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-10",
+      "page_start": 8,
+      "page_end": 9,
+      "section_heading": "Linear Equations",
+      "chunk_kind": "paragraph",
+      "text": "Next, we add five to both sides and we\nare left with x > 0.\n\nx + 2 = 3 and x + 2 = -3\n-1 -1 -2 -2\nx = 1\nx = -5\n\nYour turn: │3x – 4│= 5\n\n[You should get x = -1/3 and x = 3]\n\nLinear Equations\n\nIf we plot all the solutions to a linear equation on a graph, they form a line.\nThat is why they are called linear equations. Linear equations can be\nwritten in slope-intercept form. There are two important things to know\nwhen writing the equation of a line in slope-intercept form; the slope and\nthe y-intercept.\n\nThe slope of the line gives the rate of change. Remember slope is rise over\nthe run. That is because from any point on the line, the “direction” to\nanother point on the line is given in terms of the x and y coordinates, how\nmuch it “rises,” goes up (or if negative, down) and “runs” (moves in the\nhorizontal direction). For example, if the slope is 2/3; from any point on\nyour line to get to another point on your line we would move positive (up) 2\nand positive (to the right) 3. The y-intercept is the point where the line\ncrosses the y axis.\n\nSlope-intercept form is written where the equation is solved for y:\n\ny = mx + b\n\nwhere m is the slope and b is the y-intercept.\n\nTo find the slope of a line that is not written in slope intercept form, we must\n\nsolve the equation for y.",
+      "source_spans": [
+        {
+          "page_number": 8,
+          "start_offset": 957,
+          "end_offset": 1016
+        },
+        {
+          "page_number": 9,
+          "start_offset": 0,
+          "end_offset": 50
+        },
+        {
+          "page_number": 9,
+          "start_offset": 51,
+          "end_offset": 74
+        },
+        {
+          "page_number": 9,
+          "start_offset": 75,
+          "end_offset": 111
+        },
+        {
+          "page_number": 9,
+          "start_offset": 112,
+          "end_offset": 129
+        },
+        {
+          "page_number": 9,
+          "start_offset": 130,
+          "end_offset": 444
+        },
+        {
+          "page_number": 9,
+          "start_offset": 445,
+          "end_offset": 989
+        },
+        {
+          "page_number": 9,
+          "start_offset": 990,
+          "end_offset": 1058
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1059,
+          "end_offset": 1070
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1071,
+          "end_offset": 1118
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1119,
+          "end_offset": 1200
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1200,
+          "end_offset": 1226
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-11",
+      "page_start": 9,
+      "page_end": 10,
+      "section_heading": "Linear Equations",
+      "chunk_kind": "paragraph",
+      "text": "where m is the slope and b is the y-intercept.\n\nTo find the slope of a line that is not written in slope intercept form, we must\n\nsolve the equation for y.\n\nFor example:\n\nFind the slope and y-intercept of the line 3x – 2y = 4.\n\nWe need to put the equation in slope intercept form. Then we can quickly\nidentify the parts by their position in the equation.\n\n3x – 2y = 4\n-3x -3x\n- 2y = -3x + 4\n-2 -2\n\ny = 3x - 2\nNow it is easy to compare the\nequation we have to the slope-intercept form and identify the slope and the\ny-intercept of this line.\n\ny = 3x - 2\n\ny = mx + b, so the slope, m= 3/2 and the y-intercept, b=-2.\n\nYour turn: Find the slope and y-intercept of the linear equation x – 3y = -6\n\n[You should get m = 1/3 and b = 2]\n\nWriting the Equation of a Line in Slope Intercept Form\n\nLet’s try this example:\n\nWhat is the equation of a line that has a slope of -2/3 and the point (9, 2)?\n\nSince we know that lines can be written in the form y =mx + b, use this\nequation as a template and substitute the information that you have into the\nequation to find the y-intercept.\n\ny = mx + b\n\n2 = -2/3 (9) + b\n\n2 = -2(3) + b\n\n2 = -6 + b\n\n2 + 6 = b\n\n8 = b\n\nSubstitute -2/3 in for the slope\nm, and (9, 2) in for the point\n(x, y) in the equation.\nTo solve we subtract 3x\nfrom both sides of the\nequation. Be careful to\nnote that the 2y remaining\nis negative. Then divide\nboth sides by -2.",
+      "source_spans": [
+        {
+          "page_number": 9,
+          "start_offset": 1071,
+          "end_offset": 1118
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1119,
+          "end_offset": 1200
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1200,
+          "end_offset": 1226
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1227,
+          "end_offset": 1240
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1241,
+          "end_offset": 1297
+        },
+        {
+          "page_number": 9,
+          "start_offset": 1298,
+          "end_offset": 1424
+        },
+        {
+          "page_number": 10,
+          "start_offset": 0,
+          "end_offset": 41
+        },
+        {
+          "page_number": 10,
+          "start_offset": 42,
+          "end_offset": 185
+        },
+        {
+          "page_number": 10,
+          "start_offset": 186,
+          "end_offset": 197
+        },
+        {
+          "page_number": 10,
+          "start_offset": 198,
+          "end_offset": 258
+        },
+        {
+          "page_number": 10,
+          "start_offset": 259,
+          "end_offset": 336
+        },
+        {
+          "page_number": 10,
+          "start_offset": 337,
+          "end_offset": 372
+        },
+        {
+          "page_number": 10,
+          "start_offset": 373,
+          "end_offset": 428
+        },
+        {
+          "page_number": 10,
+          "start_offset": 429,
+          "end_offset": 453
+        },
+        {
+          "page_number": 10,
+          "start_offset": 454,
+          "end_offset": 532
+        },
+        {
+          "page_number": 10,
+          "start_offset": 533,
+          "end_offset": 716
+        },
+        {
+          "page_number": 10,
+          "start_offset": 717,
+          "end_offset": 728
+        },
+        {
+          "page_number": 10,
+          "start_offset": 729,
+          "end_offset": 746
+        },
+        {
+          "page_number": 10,
+          "start_offset": 747,
+          "end_offset": 761
+        },
+        {
+          "page_number": 10,
+          "start_offset": 762,
+          "end_offset": 773
+        },
+        {
+          "page_number": 10,
+          "start_offset": 774,
+          "end_offset": 784
+        },
+        {
+          "page_number": 10,
+          "start_offset": 785,
+          "end_offset": 791
+        },
+        {
+          "page_number": 10,
+          "start_offset": 792,
+          "end_offset": 1020
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-12",
+      "page_start": 10,
+      "page_end": 11,
+      "section_heading": "Linear Equations",
+      "chunk_kind": "equation_group",
+      "text": "Substitute -2/3 in for the slope\nm, and (9, 2) in for the point\n(x, y) in the equation.\nTo solve we subtract 3x\nfrom both sides of the\nequation. Be careful to\nnote that the 2y remaining\nis negative. Then divide\nboth sides by -2.\n\nNow you have everything you need to write the equation of the line with\nslope -2/3 through the point (9,2). Put the slope and y-intercept back into\nthe equation and you have y = -2/3x + 8.\n\nSometimes, the slope isn’t given. Let’s try another example:\n\nFind the equation of a line that passes through the points (3, 1) and (6, 2).\n\nThe first thing we need to do is find the slope of the line through these two\npoints.\nRemember that:\n\nslope = m =\n\nm = 2 1\n\nm = 1\n\nNow we can substitute the slope and one of the points (either one will work)\ninto the equation y =mx + b and solve for b.\n\nWe’ll use the point (3, 1) for (x, y)\n\ny = mx + b\n\n1 = 1/3 (3) + b\n\n1 = 1 + b\n\n1 - 1 = b\n\n0 = b\nNow we have everything we need to write the equation of the line with\npoints (3, 1) and (6, 2). We found that the slope m =1/3 then we found the\ny-intercept. Putting them into the equation you have y = 1/3x + 0\n\nYour turn: Find the equation of the line that goes through the points (5, 4)\nand (1, -4).\n\n[You should get y = 2x - 6]\nNo one is trying to\nconfuse you with all of\nthese subscripts…Its just\nthat we have two points\n(x, y) so we call the first\none (x1, y1) and the\nsecond (x2, y2) Substitute\n(3, 1) in for one point and\n(6, 2) in for the other. Be\ncareful to go the same\ndirection when you\nsubtract and WATCH",
+      "source_spans": [
+        {
+          "page_number": 10,
+          "start_offset": 792,
+          "end_offset": 1020
+        },
+        {
+          "page_number": 11,
+          "start_offset": 0,
+          "end_offset": 189
+        },
+        {
+          "page_number": 11,
+          "start_offset": 190,
+          "end_offset": 251
+        },
+        {
+          "page_number": 11,
+          "start_offset": 252,
+          "end_offset": 330
+        },
+        {
+          "page_number": 11,
+          "start_offset": 331,
+          "end_offset": 432
+        },
+        {
+          "page_number": 11,
+          "start_offset": 433,
+          "end_offset": 445
+        },
+        {
+          "page_number": 11,
+          "start_offset": 446,
+          "end_offset": 454
+        },
+        {
+          "page_number": 11,
+          "start_offset": 455,
+          "end_offset": 461
+        },
+        {
+          "page_number": 11,
+          "start_offset": 462,
+          "end_offset": 584
+        },
+        {
+          "page_number": 11,
+          "start_offset": 585,
+          "end_offset": 623
+        },
+        {
+          "page_number": 11,
+          "start_offset": 624,
+          "end_offset": 635
+        },
+        {
+          "page_number": 11,
+          "start_offset": 636,
+          "end_offset": 652
+        },
+        {
+          "page_number": 11,
+          "start_offset": 653,
+          "end_offset": 663
+        },
+        {
+          "page_number": 11,
+          "start_offset": 664,
+          "end_offset": 674
+        },
+        {
+          "page_number": 11,
+          "start_offset": 675,
+          "end_offset": 892
+        },
+        {
+          "page_number": 11,
+          "start_offset": 893,
+          "end_offset": 983
+        },
+        {
+          "page_number": 11,
+          "start_offset": 984,
+          "end_offset": 1299
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-13",
+      "page_start": 11,
+      "page_end": 13,
+      "section_heading": "Graphing Linear Equations",
+      "chunk_kind": "paragraph",
+      "text": "[You should get y = 2x - 6]\nNo one is trying to\nconfuse you with all of\nthese subscripts…Its just\nthat we have two points\n(x, y) so we call the first\none (x1, y1) and the\nsecond (x2, y2) Substitute\n(3, 1) in for one point and\n(6, 2) in for the other. Be\ncareful to go the same\ndirection when you\nsubtract and WATCH\n\nYOUR SIGNS!\n\nGraphing Linear Equations\n\nTo graph linear equations from the y-intercept form begin by plotting the y-\nintercept on the graph. From this point, use the slope to find another point\non the line.\n\nFor example: Graph the equation y = ¾ x + 1\n\nNOTE: IF the slope is a whole number write it over 1 so you can count your\nslope, 3 = 3\n\nYour turn: Graph the line 4x +2y = 8 (hint: solve for y-intercept form first)\n\n[you should find y-intercept at (0,4) and the slope should be negative\n\nSystems of Equations\n\nWe have looked at solving one equation at a time. Sometimes we work with\nmore than one equation at once. The following:\n\ny = 2x\n\ny = -x – 3\nSince our y-intercept is 1, we know\nthat the point (0, 1) will be on our\nline.\n\nFrom this point, we will use our\nslope to find another point. The\nslope (3/4) is rise\nrun\n, so if we go\nup 3 and right 4 from the yintercept we will arrive at another\npoint on the line, (4, 4).\n\nTwo points make a line, so connect\nthe points and we have the graph of\ny = ¾ x + 1\n\nis called a system of equations. The solution to a system of equations must\nsatisfy both equations. There are several different methods to accomplish\nthis. We will review two: graphing and substitution.",
+      "source_spans": [
+        {
+          "page_number": 11,
+          "start_offset": 984,
+          "end_offset": 1299
+        },
+        {
+          "page_number": 11,
+          "start_offset": 1299,
+          "end_offset": 1310
+        },
+        {
+          "page_number": 12,
+          "start_offset": 0,
+          "end_offset": 26
+        },
+        {
+          "page_number": 12,
+          "start_offset": 27,
+          "end_offset": 194
+        },
+        {
+          "page_number": 12,
+          "start_offset": 194,
+          "end_offset": 238
+        },
+        {
+          "page_number": 12,
+          "start_offset": 239,
+          "end_offset": 327
+        },
+        {
+          "page_number": 12,
+          "start_offset": 328,
+          "end_offset": 406
+        },
+        {
+          "page_number": 12,
+          "start_offset": 407,
+          "end_offset": 478
+        },
+        {
+          "page_number": 12,
+          "start_offset": 479,
+          "end_offset": 500
+        },
+        {
+          "page_number": 12,
+          "start_offset": 501,
+          "end_offset": 621
+        },
+        {
+          "page_number": 12,
+          "start_offset": 622,
+          "end_offset": 629
+        },
+        {
+          "page_number": 12,
+          "start_offset": 630,
+          "end_offset": 720
+        },
+        {
+          "page_number": 12,
+          "start_offset": 721,
+          "end_offset": 915
+        },
+        {
+          "page_number": 12,
+          "start_offset": 916,
+          "end_offset": 998
+        },
+        {
+          "page_number": 13,
+          "start_offset": 0,
+          "end_offset": 203
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-14",
+      "page_start": 13,
+      "page_end": 13,
+      "section_heading": "Graphing",
+      "chunk_kind": "paragraph",
+      "text": "is called a system of equations. The solution to a system of equations must\nsatisfy both equations. There are several different methods to accomplish\nthis. We will review two: graphing and substitution.\n\nGraphing:\n\nWhat does the graph for a system of equations look like? Well, one equation\nmakes a line, so two equations make….two lines! For the above example,\nthe graph would look like this:\n\nSince each point on a line is a solution to the equation – the point that\nsatisfies both equations is the point where they intersect. The solution for\nthis system of equations is the point (1, 2).\n\nYour turn: Solve the system of equations by graphing:\n\ny = -1/2 x – 2\n\ny = -7/2 x + 4\n\n[You should get (2, -3)]\n\nNote: Often we need to solve the equations for y-intercept form before\ngraphing them.\n\ny = 2x\ny = -x + 3",
+      "source_spans": [
+        {
+          "page_number": 13,
+          "start_offset": 0,
+          "end_offset": 203
+        },
+        {
+          "page_number": 13,
+          "start_offset": 204,
+          "end_offset": 214
+        },
+        {
+          "page_number": 13,
+          "start_offset": 215,
+          "end_offset": 394
+        },
+        {
+          "page_number": 13,
+          "start_offset": 395,
+          "end_offset": 592
+        },
+        {
+          "page_number": 13,
+          "start_offset": 593,
+          "end_offset": 647
+        },
+        {
+          "page_number": 13,
+          "start_offset": 648,
+          "end_offset": 663
+        },
+        {
+          "page_number": 13,
+          "start_offset": 664,
+          "end_offset": 679
+        },
+        {
+          "page_number": 13,
+          "start_offset": 680,
+          "end_offset": 705
+        },
+        {
+          "page_number": 13,
+          "start_offset": 706,
+          "end_offset": 792
+        },
+        {
+          "page_number": 13,
+          "start_offset": 793,
+          "end_offset": 810
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-15",
+      "page_start": 13,
+      "page_end": 15,
+      "section_heading": "Substitution",
+      "chunk_kind": "paragraph",
+      "text": "[You should get (2, -3)]\n\nNote: Often we need to solve the equations for y-intercept form before\ngraphing them.\n\ny = 2x\ny = -x + 3\n\nSubstitution:\n\nWe can also solve systems of equations by substitution. Let’s look at\nanother example:\n-2x + y = -1\n\nx – 2y = -4\nTo use the substitution method, we first need to solve one equation for either\nx or y. Looking at the equations, the first one could easily be solved for y\nwithout dividing, or the second equation could be solved for x. Either\nchoice works fine. Let’s start with the first equation.\n\n-2x + y = -1\n\n+2x +2x\ny = 2x -1\n\nSo our two equations now look like this:\n\ny = 2x -1\n\nx – 2y = -4\n\nNow we know y is equal to 2x – 1. We can SUBSTITUTE this equality for\ny in the second equation.\n\ny = 2x -1\n\nx – 2y = -4\n\nx - 2(2x – 1) = -4\nx - 4x + 2 = -4\n-2 -2\n\n-3x = -6\n-3 -3\n\nx = 2\n\ny = 2(2) - 1\n\ny = 4 – 1\n\ny = 3\n\nWe know that y = 2x - 1, so\nanywhere we see y in the\nother equation, we\nsubstitute 2x - 1.\n\nDon’t forget to distribute\nyour negative sign…\n\nNow we know half the\nsolution, x = 2\n\nThe point where the lines\nwill intersect is (2, _)\nBut since x = 2, we can\nsubstitute 2 in for x in either\nof the equations and solve\nfor y to find the other value\nof our point (2, 3)\n\nYour turn: solve by substitution:\n\nx = 3y\n\ny = x + 4\n\n[You should get ( -6, -2)]\n\nLaws of Exponents\n\nThe laws of exponents give us rules for dealing with powers of variables and\nnumbers that have the same base. Here are some of the basics.",
+      "source_spans": [
+        {
+          "page_number": 13,
+          "start_offset": 680,
+          "end_offset": 705
+        },
+        {
+          "page_number": 13,
+          "start_offset": 706,
+          "end_offset": 792
+        },
+        {
+          "page_number": 13,
+          "start_offset": 793,
+          "end_offset": 810
+        },
+        {
+          "page_number": 14,
+          "start_offset": 0,
+          "end_offset": 14
+        },
+        {
+          "page_number": 14,
+          "start_offset": 15,
+          "end_offset": 115
+        },
+        {
+          "page_number": 14,
+          "start_offset": 116,
+          "end_offset": 411
+        },
+        {
+          "page_number": 14,
+          "start_offset": 412,
+          "end_offset": 425
+        },
+        {
+          "page_number": 14,
+          "start_offset": 426,
+          "end_offset": 444
+        },
+        {
+          "page_number": 14,
+          "start_offset": 445,
+          "end_offset": 486
+        },
+        {
+          "page_number": 14,
+          "start_offset": 487,
+          "end_offset": 497
+        },
+        {
+          "page_number": 14,
+          "start_offset": 498,
+          "end_offset": 510
+        },
+        {
+          "page_number": 14,
+          "start_offset": 511,
+          "end_offset": 607
+        },
+        {
+          "page_number": 14,
+          "start_offset": 608,
+          "end_offset": 618
+        },
+        {
+          "page_number": 14,
+          "start_offset": 619,
+          "end_offset": 631
+        },
+        {
+          "page_number": 14,
+          "start_offset": 632,
+          "end_offset": 673
+        },
+        {
+          "page_number": 14,
+          "start_offset": 674,
+          "end_offset": 689
+        },
+        {
+          "page_number": 14,
+          "start_offset": 690,
+          "end_offset": 696
+        },
+        {
+          "page_number": 14,
+          "start_offset": 697,
+          "end_offset": 710
+        },
+        {
+          "page_number": 14,
+          "start_offset": 711,
+          "end_offset": 721
+        },
+        {
+          "page_number": 14,
+          "start_offset": 722,
+          "end_offset": 728
+        },
+        {
+          "page_number": 14,
+          "start_offset": 729,
+          "end_offset": 820
+        },
+        {
+          "page_number": 14,
+          "start_offset": 821,
+          "end_offset": 868
+        },
+        {
+          "page_number": 14,
+          "start_offset": 869,
+          "end_offset": 906
+        },
+        {
+          "page_number": 14,
+          "start_offset": 907,
+          "end_offset": 1090
+        },
+        {
+          "page_number": 15,
+          "start_offset": 0,
+          "end_offset": 34
+        },
+        {
+          "page_number": 15,
+          "start_offset": 35,
+          "end_offset": 42
+        },
+        {
+          "page_number": 15,
+          "start_offset": 43,
+          "end_offset": 53
+        },
+        {
+          "page_number": 15,
+          "start_offset": 54,
+          "end_offset": 81
+        },
+        {
+          "page_number": 15,
+          "start_offset": 82,
+          "end_offset": 100
+        },
+        {
+          "page_number": 15,
+          "start_offset": 101,
+          "end_offset": 240
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-16",
+      "page_start": 15,
+      "page_end": 16,
+      "section_heading": "Explanation",
+      "chunk_kind": "paragraph",
+      "text": "The laws of exponents give us rules for dealing with powers of variables and\nnumbers that have the same base. Here are some of the basics.\n\nLaw\n\nExplanation\n\nExample\nAn = (A*A*A*A… n\ntimes)\n\nAn exponent is a base\n(A) multiplied by itself n\ntimes.\n54 = 5*5*5*5 = 625\nAm*An = Am+n\n\nWhen multiplying two\npowers, add the\nexponents.\nx5*x2 = x7\n(Am)n = Am*n\n\nWhen raising a power to\nanother power, multiply\nthe exponents.\n(y4)2 =\n\nAn = An-m\n\nWhen dividing powers,\nsubtract the power of the\ndenominator(bottom)\nexponent from the\nnumerator(upper) one.\n23 =\n3 2\n12 =2\n\nA0 = 1\n\nAny number raised to the\npower of 0 equals 1\n5870 = 1\n\nA-n = 1\n\nWhen you have a\nnegative exponent, it\nmeans inverse, (the\nnegative exponent is an\noperation that “flips”\nonly the base that it\napplies to).\nx-3 = 1\n\nYour turn: x5\n(x2)-3\n\n[you should get x11]\n\nMultiplying Polynomials – FOIL\n\nWhen multiplying polynomials, we need to make sure to distribute each of\nthe terms to every other term. There are several ways of doing this; we will\nfocus on the most common one.\n\nDo you remember FOIL? FOIL is an acronym we use to help us multiply\npolynomials. FOIL stands for First, Outer, Inner, Last. It depicts the order\nin which we multiply. Let’s try an example:\n\nSimplify:\n\n(2x + 1)(x – 2)",
+      "source_spans": [
+        {
+          "page_number": 15,
+          "start_offset": 101,
+          "end_offset": 240
+        },
+        {
+          "page_number": 15,
+          "start_offset": 241,
+          "end_offset": 245
+        },
+        {
+          "page_number": 15,
+          "start_offset": 245,
+          "end_offset": 257
+        },
+        {
+          "page_number": 15,
+          "start_offset": 257,
+          "end_offset": 289
+        },
+        {
+          "page_number": 15,
+          "start_offset": 290,
+          "end_offset": 378
+        },
+        {
+          "page_number": 15,
+          "start_offset": 379,
+          "end_offset": 451
+        },
+        {
+          "page_number": 15,
+          "start_offset": 452,
+          "end_offset": 523
+        },
+        {
+          "page_number": 15,
+          "start_offset": 524,
+          "end_offset": 534
+        },
+        {
+          "page_number": 15,
+          "start_offset": 535,
+          "end_offset": 658
+        },
+        {
+          "page_number": 15,
+          "start_offset": 659,
+          "end_offset": 666
+        },
+        {
+          "page_number": 15,
+          "start_offset": 667,
+          "end_offset": 721
+        },
+        {
+          "page_number": 15,
+          "start_offset": 722,
+          "end_offset": 730
+        },
+        {
+          "page_number": 15,
+          "start_offset": 731,
+          "end_offset": 878
+        },
+        {
+          "page_number": 16,
+          "start_offset": 0,
+          "end_offset": 21
+        },
+        {
+          "page_number": 16,
+          "start_offset": 22,
+          "end_offset": 43
+        },
+        {
+          "page_number": 16,
+          "start_offset": 44,
+          "end_offset": 75
+        },
+        {
+          "page_number": 16,
+          "start_offset": 76,
+          "end_offset": 256
+        },
+        {
+          "page_number": 16,
+          "start_offset": 257,
+          "end_offset": 446
+        },
+        {
+          "page_number": 16,
+          "start_offset": 447,
+          "end_offset": 457
+        },
+        {
+          "page_number": 16,
+          "start_offset": 458,
+          "end_offset": 474
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-17",
+      "page_start": 16,
+      "page_end": 17,
+      "section_heading": "Explanation",
+      "chunk_kind": "paragraph",
+      "text": "Do you remember FOIL? FOIL is an acronym we use to help us multiply\npolynomials. FOIL stands for First, Outer, Inner, Last. It depicts the order\nin which we multiply. Let’s try an example:\n\nSimplify:\n\n(2x + 1)(x – 2)\n\nSimplify:\n\n(-6p2q)(-4p4q5)\n\n= (-6)(-4)p2+4q1+5\n\n=24p6q6\n\nSimplify:\n\n5x -2 – 3 + 2x0\n\nx - 3 + 2(1)\n\n- 1\n\nCheck for order of\noperations first. We can\nmultiply coefficients\ntogether then use the\nlaws of exponents to\ncombine bases that are\nalike.\n\nWhen we multiply\npowers, we add the\nexponents.\n\nNote: If the base has a\npower of 1 you may\nwant to write it in so you\ndon’t forget to add the\npower.\n\n2x2 – 2x\n\n2x2 – 2x + x – 2\n\n2x2 – x – 2\n\nYour turn: (2x + 3)(x – 1)\n\n[You should get 2x2+ x – 3]",
+      "source_spans": [
+        {
+          "page_number": 16,
+          "start_offset": 257,
+          "end_offset": 446
+        },
+        {
+          "page_number": 16,
+          "start_offset": 447,
+          "end_offset": 457
+        },
+        {
+          "page_number": 16,
+          "start_offset": 458,
+          "end_offset": 474
+        },
+        {
+          "page_number": 16,
+          "start_offset": 475,
+          "end_offset": 485
+        },
+        {
+          "page_number": 16,
+          "start_offset": 486,
+          "end_offset": 502
+        },
+        {
+          "page_number": 16,
+          "start_offset": 503,
+          "end_offset": 522
+        },
+        {
+          "page_number": 16,
+          "start_offset": 523,
+          "end_offset": 531
+        },
+        {
+          "page_number": 16,
+          "start_offset": 532,
+          "end_offset": 542
+        },
+        {
+          "page_number": 16,
+          "start_offset": 543,
+          "end_offset": 559
+        },
+        {
+          "page_number": 16,
+          "start_offset": 560,
+          "end_offset": 573
+        },
+        {
+          "page_number": 16,
+          "start_offset": 574,
+          "end_offset": 578
+        },
+        {
+          "page_number": 16,
+          "start_offset": 579,
+          "end_offset": 718
+        },
+        {
+          "page_number": 16,
+          "start_offset": 719,
+          "end_offset": 766
+        },
+        {
+          "page_number": 16,
+          "start_offset": 767,
+          "end_offset": 867
+        },
+        {
+          "page_number": 17,
+          "start_offset": 0,
+          "end_offset": 9
+        },
+        {
+          "page_number": 17,
+          "start_offset": 10,
+          "end_offset": 27
+        },
+        {
+          "page_number": 17,
+          "start_offset": 28,
+          "end_offset": 40
+        },
+        {
+          "page_number": 17,
+          "start_offset": 41,
+          "end_offset": 68
+        },
+        {
+          "page_number": 17,
+          "start_offset": 69,
+          "end_offset": 97
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-18",
+      "page_start": 16,
+      "page_end": 18,
+      "section_heading": "Quadratics",
+      "chunk_kind": "paragraph",
+      "text": "Note: If the base has a\npower of 1 you may\nwant to write it in so you\ndon’t forget to add the\npower.\n\n2x2 – 2x\n\n2x2 – 2x + x – 2\n\n2x2 – x – 2\n\nYour turn: (2x + 3)(x – 1)\n\n[You should get 2x2+ x – 3]\n\nQuadratics\n\nQuadratic equations are equations that have a variable to the second power,\nlike x2 + x = 6. Since x2 and x are not like terms they can not be combined.\nWe need a new way for finding solutions to quadratic equations.\n\nSolving by factoring:\n\nTo solve an equation by factoring, one side of the equation must be equal to\nzero. In the equation 3x2 = x. We would need to subtract x from both sides,\nso we would have\n3x2 – x = 0.\n\nOur goal with factoring is to find two terms that multiply together to\ngive us zero. Since x is a factor in both 3x2 and x, we can factor out an x\nfrom the equation and rewrite it,\nx (3x – 1) = 0\n\nOur first step is to\nmultiply the first terms\ntogether (red). Then\nwe multiply the outer\nterms (blue).\n\nNext, we multiply the\ninner terms (green),\nfollowed by the last\nterms (pink).\n\nNow, we combine like\nterms and our answer\nis simplified!\n\nIn order for two terms to multiply together and result in zero, ONE OF\nTHEM MUST BE ZERO. This is the reason factoring works!\n\nx (3x – 1) = 0\nThink about it for a minute, we know that only 0 times __ = 0. So, either x\nmust equal 0 or 3x – 1 must equal 0.",
+      "source_spans": [
+        {
+          "page_number": 16,
+          "start_offset": 767,
+          "end_offset": 867
+        },
+        {
+          "page_number": 17,
+          "start_offset": 0,
+          "end_offset": 9
+        },
+        {
+          "page_number": 17,
+          "start_offset": 10,
+          "end_offset": 27
+        },
+        {
+          "page_number": 17,
+          "start_offset": 28,
+          "end_offset": 40
+        },
+        {
+          "page_number": 17,
+          "start_offset": 41,
+          "end_offset": 68
+        },
+        {
+          "page_number": 17,
+          "start_offset": 69,
+          "end_offset": 97
+        },
+        {
+          "page_number": 17,
+          "start_offset": 98,
+          "end_offset": 109
+        },
+        {
+          "page_number": 17,
+          "start_offset": 110,
+          "end_offset": 327
+        },
+        {
+          "page_number": 17,
+          "start_offset": 328,
+          "end_offset": 350
+        },
+        {
+          "page_number": 17,
+          "start_offset": 351,
+          "end_offset": 534
+        },
+        {
+          "page_number": 17,
+          "start_offset": 535,
+          "end_offset": 731
+        },
+        {
+          "page_number": 17,
+          "start_offset": 732,
+          "end_offset": 835
+        },
+        {
+          "page_number": 17,
+          "start_offset": 836,
+          "end_offset": 914
+        },
+        {
+          "page_number": 17,
+          "start_offset": 915,
+          "end_offset": 971
+        },
+        {
+          "page_number": 18,
+          "start_offset": 0,
+          "end_offset": 126
+        },
+        {
+          "page_number": 18,
+          "start_offset": 127,
+          "end_offset": 255
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-19",
+      "page_start": 18,
+      "page_end": 18,
+      "section_heading": "Quadratics",
+      "chunk_kind": "equation_group",
+      "text": "x (3x – 1) = 0\nThink about it for a minute, we know that only 0 times __ = 0. So, either x\nmust equal 0 or 3x – 1 must equal 0.\n\nx = 0\n(3x -1) = 0\n\nActually, they both do! Since we are solving a quadratic equation we can\nhave up to 2 solutions. We already know that one of them is x = 0. To find\nthe other, we solve:\n3x – 1 = 0\n\n3x = 1\n\nx = 1\n\nLet’s do another one.\n\nTo solve the equation x2 + x = 6, one side of the equation must be equal to\nzero. Subtracting the 6 from both sides we have x2 + x – 6 = 0. But how can\nwe factor x2 + x – 6?\n\nWhen we use FOIL to multiply polynomials we know that it takes two\nbinomials to produce such a result, so when we factor, we are trying to\nfigure out what those two binomials are. In order to do this, we have “undo”",
+      "source_spans": [
+        {
+          "page_number": 18,
+          "start_offset": 127,
+          "end_offset": 255
+        },
+        {
+          "page_number": 18,
+          "start_offset": 256,
+          "end_offset": 274
+        },
+        {
+          "page_number": 18,
+          "start_offset": 275,
+          "end_offset": 455
+        },
+        {
+          "page_number": 18,
+          "start_offset": 456,
+          "end_offset": 463
+        },
+        {
+          "page_number": 18,
+          "start_offset": 464,
+          "end_offset": 470
+        },
+        {
+          "page_number": 18,
+          "start_offset": 471,
+          "end_offset": 493
+        },
+        {
+          "page_number": 18,
+          "start_offset": 494,
+          "end_offset": 668
+        },
+        {
+          "page_number": 18,
+          "start_offset": 669,
+          "end_offset": 885
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-20",
+      "page_start": 18,
+      "page_end": 19,
+      "section_heading": "FOIL.",
+      "chunk_kind": "paragraph",
+      "text": "When we use FOIL to multiply polynomials we know that it takes two\nbinomials to produce such a result, so when we factor, we are trying to\nfigure out what those two binomials are. In order to do this, we have “undo”\n\nFOIL.\n\nTo get your First terms, we need to find two terms that will multiply\ntogether to give you the first term in your quadratic equation. Since the first\nterm is x2, we only have one choice, x x . Our first term in each polynomial\nmust be x.\n\n(x )(x )\n\nOur Last terms are a bit trickier. This is where factoring becomes like a bit\nlike a puzzle. The last terms must add together to give us 1 (the coefficient\nnext to the x variable), and multiply together to give us -6 (the constant term\nin your equation). Let’s list all of the factors of six: 1, 6 and 2, 3. Since\nwe’re trying to get a negative 6, we know that one of these numbers must be\nnegative. Let’s try 1, 6. If we add 6 + (-1), we get 5, and if we add (-6) + 1,\nyou get -5… Not what we’re looking for. What about 2, 3? If we add (-3)\n\n+ 2, we get -1, but if we add (-2) + 3, we get 1, which is exactly what we are\nlooking for. We now know that one set of parentheses must have a -2, and\nthe other must have a three.\n\n(x – 2)(x + 3) = 0\n\nAgain, we know that two things multiplied together will only equal zero if\none of them is zero. So we set x – 2 and x + 3 equal to zero and solve for x.\n\nx – 2 = 0\n\nx + 3= 0\n\nx = 2\n\nx = -3\n\nOur solutions to the quadratic equation are x = -3 and 2.",
+      "source_spans": [
+        {
+          "page_number": 18,
+          "start_offset": 669,
+          "end_offset": 885
+        },
+        {
+          "page_number": 18,
+          "start_offset": 885,
+          "end_offset": 891
+        },
+        {
+          "page_number": 18,
+          "start_offset": 892,
+          "end_offset": 1130
+        },
+        {
+          "page_number": 18,
+          "start_offset": 1131,
+          "end_offset": 1140
+        },
+        {
+          "page_number": 18,
+          "start_offset": 1141,
+          "end_offset": 1682
+        },
+        {
+          "page_number": 19,
+          "start_offset": 0,
+          "end_offset": 181
+        },
+        {
+          "page_number": 19,
+          "start_offset": 182,
+          "end_offset": 201
+        },
+        {
+          "page_number": 19,
+          "start_offset": 202,
+          "end_offset": 355
+        },
+        {
+          "page_number": 19,
+          "start_offset": 356,
+          "end_offset": 366
+        },
+        {
+          "page_number": 19,
+          "start_offset": 367,
+          "end_offset": 376
+        },
+        {
+          "page_number": 19,
+          "start_offset": 377,
+          "end_offset": 383
+        },
+        {
+          "page_number": 19,
+          "start_offset": 384,
+          "end_offset": 391
+        },
+        {
+          "page_number": 19,
+          "start_offset": 392,
+          "end_offset": 450
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-21",
+      "page_start": 19,
+      "page_end": 20,
+      "section_heading": "FOIL.",
+      "chunk_kind": "paragraph",
+      "text": "Again, we know that two things multiplied together will only equal zero if\none of them is zero. So we set x – 2 and x + 3 equal to zero and solve for x.\n\nx – 2 = 0\n\nx + 3= 0\n\nx = 2\n\nx = -3\n\nOur solutions to the quadratic equation are x = -3 and 2.\n\nLet’s try another example:\n\n2x2 – 7x – 4 = 0\n\n(2x )(x )\n\n(2x + 1)(x – 4)\n\n2x + 1 = 0\nx – 4 = 0\n- 1 -1\n- 4 - 4\n\n2x = -1\n\nx = 4\n2 2\n\nx = -1/2\n\nYour turn: 2x2 + 7x = -4\n\n[You should get x = -3 and -1/2]\nThis one’s a bit harder because of the 2 in front of the x2. When setting up\nour parentheses, we have to think about how our First terms can multiply\ntogether to give us 2. The only way to do this is by 2x and x.\nHere, it really becomes a puzzle. We have to find two numbers that\nmultiply together to give us four. Because of the 2 in front of the x2, we\nknow that double one of these numbers plus the other must give us -7.\nLuckily 4 has only two sets of factors: 1 & 4 and 2 & 2. One of these must\nbe negative and one positive, since the 4 is negative. If you double -4, you\nget -8. If you add 1 to -8, you get -7, which is exactly what we are looking\nfor. Since the 4 must be multiplied by the 2 in the first set of parentheses,\nit has to go in the other set of parenthesis.\nThen solve both for 0 to find our solutions.\n\nSolving by the Quadratic Formula:\n\nx =\n\nFactoring can be the easiest way to solve a quadratic equation when the\ncoefficient of x2 is one. But as the equations get harder there is another\nstrategy we can use. The quadratic formula solves equations of the form:\n\nax2 + bx + c = 0\n\n( the equation must be solved for zero).\nwhere;",
+      "source_spans": [
+        {
+          "page_number": 19,
+          "start_offset": 202,
+          "end_offset": 355
+        },
+        {
+          "page_number": 19,
+          "start_offset": 356,
+          "end_offset": 366
+        },
+        {
+          "page_number": 19,
+          "start_offset": 367,
+          "end_offset": 376
+        },
+        {
+          "page_number": 19,
+          "start_offset": 377,
+          "end_offset": 383
+        },
+        {
+          "page_number": 19,
+          "start_offset": 384,
+          "end_offset": 391
+        },
+        {
+          "page_number": 19,
+          "start_offset": 392,
+          "end_offset": 450
+        },
+        {
+          "page_number": 19,
+          "start_offset": 451,
+          "end_offset": 478
+        },
+        {
+          "page_number": 19,
+          "start_offset": 479,
+          "end_offset": 496
+        },
+        {
+          "page_number": 19,
+          "start_offset": 497,
+          "end_offset": 507
+        },
+        {
+          "page_number": 19,
+          "start_offset": 508,
+          "end_offset": 524
+        },
+        {
+          "page_number": 19,
+          "start_offset": 525,
+          "end_offset": 561
+        },
+        {
+          "page_number": 19,
+          "start_offset": 562,
+          "end_offset": 570
+        },
+        {
+          "page_number": 19,
+          "start_offset": 571,
+          "end_offset": 581
+        },
+        {
+          "page_number": 19,
+          "start_offset": 582,
+          "end_offset": 591
+        },
+        {
+          "page_number": 19,
+          "start_offset": 592,
+          "end_offset": 617
+        },
+        {
+          "page_number": 19,
+          "start_offset": 618,
+          "end_offset": 1473
+        },
+        {
+          "page_number": 20,
+          "start_offset": 0,
+          "end_offset": 34
+        },
+        {
+          "page_number": 20,
+          "start_offset": 35,
+          "end_offset": 39
+        },
+        {
+          "page_number": 20,
+          "start_offset": 40,
+          "end_offset": 260
+        },
+        {
+          "page_number": 20,
+          "start_offset": 261,
+          "end_offset": 278
+        },
+        {
+          "page_number": 20,
+          "start_offset": 279,
+          "end_offset": 327
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-22",
+      "page_start": 20,
+      "page_end": 21,
+      "section_heading": "FOIL.",
+      "chunk_kind": "paragraph",
+      "text": "Factoring can be the easiest way to solve a quadratic equation when the\ncoefficient of x2 is one. But as the equations get harder there is another\nstrategy we can use. The quadratic formula solves equations of the form:\n\nax2 + bx + c = 0\n\n( the equation must be solved for zero).\nwhere;\n\na is the coefficient (“number” of x2’s we have) of x2\n\nb is the coefficient (“number” of x’s we have) of x, and\n\nc is the constant term of our equation when solved for zero.\n\nIn the equation, x2 + x – 6 = 0,\na= 1, b= 1 and c= -6. By substituting these values of a, b, and c into the\nquadratic formula we are able to solve for x.\n\nx =\n\n(1)\n(4)(1)( 6)\n(2)(1)\n\n1 ( 24)\n\n1 5\n1 5\n\nx = -3, 2\n\nMake sure that when b is\nsquared that it is in parenthesis.\nIf it isn’t, and the value is\nnegative, we’ll get the wrong\nsolution.\n\nBe careful with the signs inside\nthe radical. Remember,\nnegative times a negative equals\na positive.\n\nNotice that there are TWO\nsolutions.\n\nYour turn: 3x2 + 13x = 10 (hint, make sure to solve the equation for zero\nbefore using the quadratic equation)\n\n[You should get x = -5 and 2/3]",
+      "source_spans": [
+        {
+          "page_number": 20,
+          "start_offset": 40,
+          "end_offset": 260
+        },
+        {
+          "page_number": 20,
+          "start_offset": 261,
+          "end_offset": 278
+        },
+        {
+          "page_number": 20,
+          "start_offset": 279,
+          "end_offset": 327
+        },
+        {
+          "page_number": 20,
+          "start_offset": 328,
+          "end_offset": 382
+        },
+        {
+          "page_number": 20,
+          "start_offset": 383,
+          "end_offset": 440
+        },
+        {
+          "page_number": 20,
+          "start_offset": 441,
+          "end_offset": 502
+        },
+        {
+          "page_number": 20,
+          "start_offset": 503,
+          "end_offset": 657
+        },
+        {
+          "page_number": 20,
+          "start_offset": 658,
+          "end_offset": 662
+        },
+        {
+          "page_number": 20,
+          "start_offset": 663,
+          "end_offset": 685
+        },
+        {
+          "page_number": 20,
+          "start_offset": 686,
+          "end_offset": 694
+        },
+        {
+          "page_number": 20,
+          "start_offset": 695,
+          "end_offset": 703
+        },
+        {
+          "page_number": 20,
+          "start_offset": 704,
+          "end_offset": 714
+        },
+        {
+          "page_number": 20,
+          "start_offset": 715,
+          "end_offset": 845
+        },
+        {
+          "page_number": 20,
+          "start_offset": 846,
+          "end_offset": 947
+        },
+        {
+          "page_number": 20,
+          "start_offset": 948,
+          "end_offset": 984
+        },
+        {
+          "page_number": 21,
+          "start_offset": 0,
+          "end_offset": 111
+        },
+        {
+          "page_number": 21,
+          "start_offset": 112,
+          "end_offset": 144
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-23",
+      "page_start": 21,
+      "page_end": 22,
+      "section_heading": "Applications",
+      "chunk_kind": "practice",
+      "text": "Your turn: 3x2 + 13x = 10 (hint, make sure to solve the equation for zero\nbefore using the quadratic equation)\n\n[You should get x = -5 and 2/3]\n\nApplications\n\nQuadratics functions are often used to model many situations. They can be\n\nsolved using the methods above.\n\nGeometry – area/perimeter:\n\nLet’s take a look at the following problem:\n\nAt first this may not look like a quadratic at all! But as we work through the\nproblem, we’ll see how it relates.\n\nP = 2L + 2w\n\n46 = 2L + 2w\n\n23 = L + w\n\nWhat else do we know….Area\n\nA = (L)(w)\n\n120 = (L)(w)\n\nNow, we have a system of equations:\n\nYour dorm room has a perimeter (P) of 46ft and an area\n(A) of 120ft2 . What are the dimensions of your dorm?\n\nWe know from geometry that the formula\nfor perimeter is P = 2L + 2w.\n\nSince our perimeter is 46, we just plug that\nnumber into the formula.\n\n2 is a common factor on all sides, so we\ndivide both sides by 2.\n\n23 = L + w\n\n120 = (L)(w)\n\nLet’s solve using substitution.\n\n23 = L + w\n\nL = 23 – w\n\n120 = (23 – w)(w)\n\n120 = -w2 + 23w\n\nw2 – 23w + 120 = 0\n\nLook familiar? It is a quadratic. Since the coefficient of w is one, let’s see if\nwe can factor this equation.\n\nw2 – 23w + 120 = 0\n\n(w )(w )\n\n(w – )(w – )\n\n(w – 8)(w – 15) = 0\n\nWe get w = 8 or w = 15. Since width is usually the smaller of the two, I\nwould pick 8, but it doesn’t really matter. If w = 8, plug that back in to\neither of your original equations.\n\n23 = L + 8\nL = 15.",
+      "source_spans": [
+        {
+          "page_number": 21,
+          "start_offset": 0,
+          "end_offset": 111
+        },
+        {
+          "page_number": 21,
+          "start_offset": 112,
+          "end_offset": 144
+        },
+        {
+          "page_number": 21,
+          "start_offset": 145,
+          "end_offset": 158
+        },
+        {
+          "page_number": 21,
+          "start_offset": 159,
+          "end_offset": 233
+        },
+        {
+          "page_number": 21,
+          "start_offset": 233,
+          "end_offset": 265
+        },
+        {
+          "page_number": 21,
+          "start_offset": 266,
+          "end_offset": 293
+        },
+        {
+          "page_number": 21,
+          "start_offset": 294,
+          "end_offset": 338
+        },
+        {
+          "page_number": 21,
+          "start_offset": 339,
+          "end_offset": 453
+        },
+        {
+          "page_number": 21,
+          "start_offset": 454,
+          "end_offset": 466
+        },
+        {
+          "page_number": 21,
+          "start_offset": 467,
+          "end_offset": 480
+        },
+        {
+          "page_number": 21,
+          "start_offset": 481,
+          "end_offset": 492
+        },
+        {
+          "page_number": 21,
+          "start_offset": 493,
+          "end_offset": 520
+        },
+        {
+          "page_number": 21,
+          "start_offset": 521,
+          "end_offset": 532
+        },
+        {
+          "page_number": 21,
+          "start_offset": 533,
+          "end_offset": 546
+        },
+        {
+          "page_number": 21,
+          "start_offset": 547,
+          "end_offset": 583
+        },
+        {
+          "page_number": 21,
+          "start_offset": 584,
+          "end_offset": 693
+        },
+        {
+          "page_number": 21,
+          "start_offset": 694,
+          "end_offset": 763
+        },
+        {
+          "page_number": 21,
+          "start_offset": 764,
+          "end_offset": 834
+        },
+        {
+          "page_number": 21,
+          "start_offset": 835,
+          "end_offset": 899
+        },
+        {
+          "page_number": 22,
+          "start_offset": 0,
+          "end_offset": 11
+        },
+        {
+          "page_number": 22,
+          "start_offset": 12,
+          "end_offset": 25
+        },
+        {
+          "page_number": 22,
+          "start_offset": 26,
+          "end_offset": 58
+        },
+        {
+          "page_number": 22,
+          "start_offset": 59,
+          "end_offset": 70
+        },
+        {
+          "page_number": 22,
+          "start_offset": 71,
+          "end_offset": 82
+        },
+        {
+          "page_number": 22,
+          "start_offset": 83,
+          "end_offset": 101
+        },
+        {
+          "page_number": 22,
+          "start_offset": 102,
+          "end_offset": 118
+        },
+        {
+          "page_number": 22,
+          "start_offset": 119,
+          "end_offset": 138
+        },
+        {
+          "page_number": 22,
+          "start_offset": 139,
+          "end_offset": 250
+        },
+        {
+          "page_number": 22,
+          "start_offset": 251,
+          "end_offset": 270
+        },
+        {
+          "page_number": 22,
+          "start_offset": 271,
+          "end_offset": 280
+        },
+        {
+          "page_number": 22,
+          "start_offset": 281,
+          "end_offset": 294
+        },
+        {
+          "page_number": 22,
+          "start_offset": 295,
+          "end_offset": 315
+        },
+        {
+          "page_number": 22,
+          "start_offset": 316,
+          "end_offset": 499
+        },
+        {
+          "page_number": 22,
+          "start_offset": 500,
+          "end_offset": 519
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-24",
+      "page_start": 22,
+      "page_end": 23,
+      "section_heading": "Applications",
+      "chunk_kind": "paragraph",
+      "text": "We get w = 8 or w = 15. Since width is usually the smaller of the two, I\nwould pick 8, but it doesn’t really matter. If w = 8, plug that back in to\neither of your original equations.\n\n23 = L + 8\nL = 15.\n\nSo the room is 15 ft by 8 ft.\n\nSolve the first equation for L by\nsubtracting w from both sides of the\nequation.\nSubstitute 23 – w for L and solve for\nzero.\nThe only way to get w2\nis w times w so we have\nour first terms. We just\nneed to find two\nnumbers that multiply\nto 120 but add to\nnegative 23.\n\nAnother quadratic application:\n\nThe height, h, of an arrow shot up in the air can be approximated by the\nequation h = 128t – 16t2 where t is time in seconds. How long does it take\nfor the arrow to reach 240 feet in the air?\n\nFirst, we need to determine what the question is talking about. There are\ntwo variables here, t, and h. The height of the arrow depends on the time it\nis in the air, so we are talking about (t, h).\n\nNext, we need to figure out what information we are given. We have the\nequation: h = 128t – 16t2. Additionally, we are told that the arrow is to\nreach 240 feet in the air – that is height. So we are trying to find the time\nthat the arrow reaches 240 feet or (__, 240).\n\nBy substituting into the equation,\n\n240 = 128t – 16t2\n\nWe can solve using the quadratic formula. We need to solve the equation\nfor zero before we begin the quadratic formula.\n-16t2 + 128t - 240 = 0\nSo, a = -16, b = 128 and c = -240",
+      "source_spans": [
+        {
+          "page_number": 22,
+          "start_offset": 316,
+          "end_offset": 499
+        },
+        {
+          "page_number": 22,
+          "start_offset": 500,
+          "end_offset": 519
+        },
+        {
+          "page_number": 22,
+          "start_offset": 520,
+          "end_offset": 550
+        },
+        {
+          "page_number": 22,
+          "start_offset": 551,
+          "end_offset": 817
+        },
+        {
+          "page_number": 23,
+          "start_offset": 0,
+          "end_offset": 31
+        },
+        {
+          "page_number": 23,
+          "start_offset": 32,
+          "end_offset": 224
+        },
+        {
+          "page_number": 23,
+          "start_offset": 225,
+          "end_offset": 423
+        },
+        {
+          "page_number": 23,
+          "start_offset": 424,
+          "end_offset": 693
+        },
+        {
+          "page_number": 23,
+          "start_offset": 694,
+          "end_offset": 729
+        },
+        {
+          "page_number": 23,
+          "start_offset": 730,
+          "end_offset": 748
+        },
+        {
+          "page_number": 23,
+          "start_offset": 749,
+          "end_offset": 926
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-25",
+      "page_start": 23,
+      "page_end": 24,
+      "section_heading": "Applications",
+      "chunk_kind": "equation_group",
+      "text": "We can solve using the quadratic formula. We need to solve the equation\nfor zero before we begin the quadratic formula.\n-16t2 + 128t - 240 = 0\nSo, a = -16, b = 128 and c = -240\n\nWe will find solutions to this quadratic equation at\n\nt =\n\nt =\n\nt = 128\n16384 15360\n\nt = 128\n\nt = 3 or t = 5\n\nSo the arrow is at 240 feet in the air twice, once at 3 seconds on its way up,\nand again at 5 seconds on its way down.\n\nYour turn: A baseball is hit and its height in feet, t seconds later can be\napproximated by h = -16t2 + 40t + 4. When does the ball hit the ground?\n(hint: the height of the ball on the ground is zero)\n\n[you get 2.6 seconds]",
+      "source_spans": [
+        {
+          "page_number": 23,
+          "start_offset": 749,
+          "end_offset": 926
+        },
+        {
+          "page_number": 23,
+          "start_offset": 927,
+          "end_offset": 980
+        },
+        {
+          "page_number": 23,
+          "start_offset": 981,
+          "end_offset": 985
+        },
+        {
+          "page_number": 23,
+          "start_offset": 986,
+          "end_offset": 990
+        },
+        {
+          "page_number": 23,
+          "start_offset": 991,
+          "end_offset": 1011
+        },
+        {
+          "page_number": 23,
+          "start_offset": 1012,
+          "end_offset": 1020
+        },
+        {
+          "page_number": 23,
+          "start_offset": 1021,
+          "end_offset": 1036
+        },
+        {
+          "page_number": 23,
+          "start_offset": 1037,
+          "end_offset": 1155
+        },
+        {
+          "page_number": 24,
+          "start_offset": 0,
+          "end_offset": 201
+        },
+        {
+          "page_number": 24,
+          "start_offset": 202,
+          "end_offset": 224
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-26",
+      "page_start": 24,
+      "page_end": 25,
+      "section_heading": "Rational Expressions",
+      "chunk_kind": "practice",
+      "text": "Your turn: A baseball is hit and its height in feet, t seconds later can be\napproximated by h = -16t2 + 40t + 4. When does the ball hit the ground?\n(hint: the height of the ball on the ground is zero)\n\n[you get 2.6 seconds]\n\nRational Expressions\n\nA rational expression is an expression that can be written as a fraction\nwhere the variable is in the denominator (on bottom). There is one very\nimportant rule when dealing with rational terms. The denominator may not\nbe zero.\n\nThe domain (possible values of x) is all real numbers except for values that\nmake the denominator equal to zero.\n\nFor the expression 1\n\nx + 5\nx + 5 = 0\n\nx = -5\n\nx = -5 is not allowed in the domain.\n\nSimplifying rational expressions\n\n1) Factor the numerator and denominator if possible.\n\n2) Find the values that make the denominator equal to zero.\n\n3) Rewrite to show a fraction equal to 1.\n\n4) Cancel any like FACTORS (remember they have to be factors,\nmultiplied, to cancel).\n\nLet’s try an example:\n\nI know what you’re thinking. Why don’t we cross\nout the two twelves? We can’t! They are not\nmultiplied, they are added (and they aren’t the\nsame terms). You can only cross out factors or\nterms that are multiplied.\n\n(3x + 2)(x – 6)\n\n(x – 6)(x – 6)\n\n(3x + 2)(x – 6)\n\n(x – 6)(x – 6)",
+      "source_spans": [
+        {
+          "page_number": 24,
+          "start_offset": 0,
+          "end_offset": 201
+        },
+        {
+          "page_number": 24,
+          "start_offset": 202,
+          "end_offset": 224
+        },
+        {
+          "page_number": 24,
+          "start_offset": 225,
+          "end_offset": 246
+        },
+        {
+          "page_number": 24,
+          "start_offset": 247,
+          "end_offset": 474
+        },
+        {
+          "page_number": 24,
+          "start_offset": 475,
+          "end_offset": 588
+        },
+        {
+          "page_number": 24,
+          "start_offset": 589,
+          "end_offset": 610
+        },
+        {
+          "page_number": 24,
+          "start_offset": 611,
+          "end_offset": 627
+        },
+        {
+          "page_number": 24,
+          "start_offset": 628,
+          "end_offset": 635
+        },
+        {
+          "page_number": 24,
+          "start_offset": 636,
+          "end_offset": 673
+        },
+        {
+          "page_number": 24,
+          "start_offset": 674,
+          "end_offset": 707
+        },
+        {
+          "page_number": 24,
+          "start_offset": 708,
+          "end_offset": 761
+        },
+        {
+          "page_number": 24,
+          "start_offset": 762,
+          "end_offset": 822
+        },
+        {
+          "page_number": 24,
+          "start_offset": 823,
+          "end_offset": 865
+        },
+        {
+          "page_number": 24,
+          "start_offset": 866,
+          "end_offset": 952
+        },
+        {
+          "page_number": 24,
+          "start_offset": 953,
+          "end_offset": 975
+        },
+        {
+          "page_number": 24,
+          "start_offset": 976,
+          "end_offset": 1189
+        },
+        {
+          "page_number": 25,
+          "start_offset": 0,
+          "end_offset": 16
+        },
+        {
+          "page_number": 25,
+          "start_offset": 17,
+          "end_offset": 32
+        },
+        {
+          "page_number": 25,
+          "start_offset": 33,
+          "end_offset": 49
+        },
+        {
+          "page_number": 25,
+          "start_offset": 50,
+          "end_offset": 65
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-27",
+      "page_start": 24,
+      "page_end": 25,
+      "section_heading": "Rational Expressions",
+      "chunk_kind": "paragraph",
+      "text": "I know what you’re thinking. Why don’t we cross\nout the two twelves? We can’t! They are not\nmultiplied, they are added (and they aren’t the\nsame terms). You can only cross out factors or\nterms that are multiplied.\n\n(3x + 2)(x – 6)\n\n(x – 6)(x – 6)\n\n(3x + 2)(x – 6)\n\n(x – 6)(x – 6)\n\nYour turn: Simplify\n\n[You get\n\nMultiplying and dividing rational expressions\n\nTo multiply rational expressions you multiply straight across, numerator to\nnumerators and denominators to denominators. You may cancel any factors\nyou find that are the same (top- to- bottom) since you are MULTIPLYING.\n(Don’t forget to find values of the domain that make the denominator equal\nto zero!)\n\nFor example:\n\nFirst we factor.\n\nNext, find the values that make the denominator 0.\nIn this case, the only number that makes the\ndenominator 0 is 6, so our domain is all real\nnumbers except 6.",
+      "source_spans": [
+        {
+          "page_number": 24,
+          "start_offset": 976,
+          "end_offset": 1189
+        },
+        {
+          "page_number": 25,
+          "start_offset": 0,
+          "end_offset": 16
+        },
+        {
+          "page_number": 25,
+          "start_offset": 17,
+          "end_offset": 32
+        },
+        {
+          "page_number": 25,
+          "start_offset": 33,
+          "end_offset": 49
+        },
+        {
+          "page_number": 25,
+          "start_offset": 50,
+          "end_offset": 65
+        },
+        {
+          "page_number": 25,
+          "start_offset": 66,
+          "end_offset": 86
+        },
+        {
+          "page_number": 25,
+          "start_offset": 87,
+          "end_offset": 96
+        },
+        {
+          "page_number": 25,
+          "start_offset": 97,
+          "end_offset": 143
+        },
+        {
+          "page_number": 25,
+          "start_offset": 144,
+          "end_offset": 449
+        },
+        {
+          "page_number": 25,
+          "start_offset": 450,
+          "end_offset": 463
+        },
+        {
+          "page_number": 25,
+          "start_offset": 464,
+          "end_offset": 481
+        },
+        {
+          "page_number": 25,
+          "start_offset": 482,
+          "end_offset": 642
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-28",
+      "page_start": 25,
+      "page_end": 27,
+      "section_heading": "Rational Expressions",
+      "chunk_kind": "equation_group",
+      "text": "Next, find the values that make the denominator 0.\nIn this case, the only number that makes the\ndenominator 0 is 6, so our domain is all real\nnumbers except 6.\n\nSince\nequals one we can cancel leaving us\nwith 3x + 2 over x – 6. Doesn’t that look much\nnicer?\n2)1\nAlways factor first!\n\nSetting each of the factors in the denominator\nequal to zero we find our domain is all real\nnumbers except for 1, 2, and ½.\nSince x – 1 and x – 2 appear in both the top\nand bottom, we can cancel them out.\n\nCollect what is left, and there we have it!\n\nYour turn:\n\n[you get\n\nDividing is very similar to multiplying; we work in the same way except we\nmultiply by the reciprocal of the second expression. Finishing is just\nmultiplying, but don’t forget your domain!\n\nLet’s divide the same two expressions:\n\nYour turn:\n\n[you get (\n6)(\n7)(\nWe check the denominators for the domain AFTER\nwe invert the second expression. Our domain is all\nreal numbers except -4, ½, 1, and 2.\nCancel any like factors, and then multiply across!\n\nAdding/Subtracting rational expressions:\n\nWhen adding/subtracting rational expressions they must have a common\ndenominator. If the terms already have a common denominator we are free\nto just add them, the denominators remain the same.\n\nThen simplify;\n\nIf the denominators are different, we must find a common denominator.",
+      "source_spans": [
+        {
+          "page_number": 25,
+          "start_offset": 482,
+          "end_offset": 642
+        },
+        {
+          "page_number": 25,
+          "start_offset": 642,
+          "end_offset": 763
+        },
+        {
+          "page_number": 25,
+          "start_offset": 764,
+          "end_offset": 969
+        },
+        {
+          "page_number": 25,
+          "start_offset": 970,
+          "end_offset": 1013
+        },
+        {
+          "page_number": 26,
+          "start_offset": 0,
+          "end_offset": 11
+        },
+        {
+          "page_number": 26,
+          "start_offset": 12,
+          "end_offset": 21
+        },
+        {
+          "page_number": 26,
+          "start_offset": 22,
+          "end_offset": 211
+        },
+        {
+          "page_number": 26,
+          "start_offset": 212,
+          "end_offset": 251
+        },
+        {
+          "page_number": 26,
+          "start_offset": 252,
+          "end_offset": 263
+        },
+        {
+          "page_number": 26,
+          "start_offset": 264,
+          "end_offset": 468
+        },
+        {
+          "page_number": 27,
+          "start_offset": 0,
+          "end_offset": 41
+        },
+        {
+          "page_number": 27,
+          "start_offset": 42,
+          "end_offset": 235
+        },
+        {
+          "page_number": 27,
+          "start_offset": 236,
+          "end_offset": 251
+        },
+        {
+          "page_number": 27,
+          "start_offset": 252,
+          "end_offset": 322
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-29",
+      "page_start": 27,
+      "page_end": 28,
+      "section_heading": "Rational Expressions",
+      "chunk_kind": "paragraph",
+      "text": "When adding/subtracting rational expressions they must have a common\ndenominator. If the terms already have a common denominator we are free\nto just add them, the denominators remain the same.\n\nThen simplify;\n\nIf the denominators are different, we must find a common denominator.\n\nSince\nis missing a factor of (x-6) we multiply\nthis term by\n(Anything divided by itself equals\none and does not change the value of the equation).\n\nWe do a similar step with\n\nmultiplying this term by it’s missing\nfactor\n\nIt is just as though we were\nadding:\n5 , the\ndenominator stays the same.\nThe common denominator for this\nexpression will be (x+6) (x-6) because\nthese terms are NOT alike. Think of it like\nit we do simple fractions:\n\nHow did we find the common denominator\nthen? We multiplied each term by the\nmissing factor, just like we will now.\n\nSimplify the rational expression;\n\n6)(\n\n= 8\n48 5\n6)(\n\n6)(\n26)\n\nYour turn:\n\n[you get\n\nSolving rational equations:\n\nTo solve an equation that contains rational expressions we multiply both\nsides of the equation by the least common denominator. . It is also\nimportant that we check our solution to make sure that it exists in our\ndomain (that is, make certain our solution does not make our rational terms\nundefined).",
+      "source_spans": [
+        {
+          "page_number": 27,
+          "start_offset": 42,
+          "end_offset": 235
+        },
+        {
+          "page_number": 27,
+          "start_offset": 236,
+          "end_offset": 251
+        },
+        {
+          "page_number": 27,
+          "start_offset": 252,
+          "end_offset": 322
+        },
+        {
+          "page_number": 27,
+          "start_offset": 323,
+          "end_offset": 470
+        },
+        {
+          "page_number": 27,
+          "start_offset": 471,
+          "end_offset": 497
+        },
+        {
+          "page_number": 27,
+          "start_offset": 498,
+          "end_offset": 543
+        },
+        {
+          "page_number": 27,
+          "start_offset": 544,
+          "end_offset": 759
+        },
+        {
+          "page_number": 27,
+          "start_offset": 760,
+          "end_offset": 874
+        },
+        {
+          "page_number": 28,
+          "start_offset": 0,
+          "end_offset": 34
+        },
+        {
+          "page_number": 28,
+          "start_offset": 35,
+          "end_offset": 39
+        },
+        {
+          "page_number": 28,
+          "start_offset": 40,
+          "end_offset": 53
+        },
+        {
+          "page_number": 28,
+          "start_offset": 54,
+          "end_offset": 62
+        },
+        {
+          "page_number": 28,
+          "start_offset": 63,
+          "end_offset": 74
+        },
+        {
+          "page_number": 28,
+          "start_offset": 75,
+          "end_offset": 84
+        },
+        {
+          "page_number": 28,
+          "start_offset": 85,
+          "end_offset": 113
+        },
+        {
+          "page_number": 28,
+          "start_offset": 114,
+          "end_offset": 415
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-30",
+      "page_start": 28,
+      "page_end": 29,
+      "section_heading": "Rational Expressions",
+      "chunk_kind": "paragraph",
+      "text": "To solve an equation that contains rational expressions we multiply both\nsides of the equation by the least common denominator. . It is also\nimportant that we check our solution to make sure that it exists in our\ndomain (that is, make certain our solution does not make our rational terms\nundefined).\n\nFor example:\n\nThe common denominator will be (x-3)(x+3) so we multiply both sides by this…\n\n3)(\n3)[\n3)(\n\nYUCK! But it simplifies nicely \n\nMake sure to distribute to the 3!\n4 (\n3)(\n1)(\nx x\n\n12)\n\n12)(\n\nx = 12 and x = -1\n\nWe need to check to see if either solution makes our original equation undefined. They\ndon’t so we have two valid solutions to the equation.\n\nYour turn:\n\n[you get x= -4, 6]",
+      "source_spans": [
+        {
+          "page_number": 28,
+          "start_offset": 114,
+          "end_offset": 415
+        },
+        {
+          "page_number": 28,
+          "start_offset": 416,
+          "end_offset": 429
+        },
+        {
+          "page_number": 28,
+          "start_offset": 430,
+          "end_offset": 507
+        },
+        {
+          "page_number": 28,
+          "start_offset": 508,
+          "end_offset": 520
+        },
+        {
+          "page_number": 28,
+          "start_offset": 521,
+          "end_offset": 554
+        },
+        {
+          "page_number": 28,
+          "start_offset": 555,
+          "end_offset": 604
+        },
+        {
+          "page_number": 29,
+          "start_offset": 0,
+          "end_offset": 4
+        },
+        {
+          "page_number": 29,
+          "start_offset": 5,
+          "end_offset": 10
+        },
+        {
+          "page_number": 29,
+          "start_offset": 11,
+          "end_offset": 29
+        },
+        {
+          "page_number": 29,
+          "start_offset": 30,
+          "end_offset": 171
+        },
+        {
+          "page_number": 29,
+          "start_offset": 172,
+          "end_offset": 183
+        },
+        {
+          "page_number": 29,
+          "start_offset": 184,
+          "end_offset": 203
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-31",
+      "page_start": 29,
+      "page_end": 29,
+      "section_heading": "Radical Expressions",
+      "chunk_kind": "paragraph",
+      "text": "We need to check to see if either solution makes our original equation undefined. They\ndon’t so we have two valid solutions to the equation.\n\nYour turn:\n\n[you get x= -4, 6]\n\nRadical Expressions\n\nRadical Expressions are expressions with roots of variables in them. The\nsquare root is a number you can square to get another number. For\ninstance, the square root of 25, 25 , is 5, because if you square 5, you get\n25.\n\nThere is one very basic rule when dealing with roots. If the root is even, you\ncannot have a negative number. This means that there can be no negative\nnumbers in square roots, fourth roots, sixth roots, etc. Why? Because if you\nmultiply two numbers to get a negative number, one must be positive and\none must be negative, right? When you square a number, you multiply the\nnumber by itself, so it’s impossible to have one be negative and one be\npositive.\n\nWhat about odd roots? If you are taking a cube root (third root), can you\nhave a negative number? What would happen if you cube (-1)? (-1)(-1)(-1)\n= -1, so you can have a negative when dealing with odd roots.\n\nSince this is quadratic, we can either\nfactor it or use the quadratic formula to\n\nsolve. Let’s see if it factors nicely…",
+      "source_spans": [
+        {
+          "page_number": 29,
+          "start_offset": 30,
+          "end_offset": 171
+        },
+        {
+          "page_number": 29,
+          "start_offset": 172,
+          "end_offset": 183
+        },
+        {
+          "page_number": 29,
+          "start_offset": 184,
+          "end_offset": 203
+        },
+        {
+          "page_number": 29,
+          "start_offset": 204,
+          "end_offset": 224
+        },
+        {
+          "page_number": 29,
+          "start_offset": 225,
+          "end_offset": 445
+        },
+        {
+          "page_number": 29,
+          "start_offset": 446,
+          "end_offset": 900
+        },
+        {
+          "page_number": 29,
+          "start_offset": 901,
+          "end_offset": 1110
+        },
+        {
+          "page_number": 29,
+          "start_offset": 1111,
+          "end_offset": 1192
+        },
+        {
+          "page_number": 29,
+          "start_offset": 1192,
+          "end_offset": 1230
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-32",
+      "page_start": 29,
+      "page_end": 30,
+      "section_heading": "Fractional Exponents",
+      "chunk_kind": "paragraph",
+      "text": "What about odd roots? If you are taking a cube root (third root), can you\nhave a negative number? What would happen if you cube (-1)? (-1)(-1)(-1)\n= -1, so you can have a negative when dealing with odd roots.\n\nSince this is quadratic, we can either\nfactor it or use the quadratic formula to\n\nsolve. Let’s see if it factors nicely…\n\nFractional Exponents:\n\nWhen you have a fractional exponent, you are also dealing with a radical.\nFractional exponents follow the form:\n\nThe denominator of the fraction gives us the root you are taking, and the\nnumerator is the power. For example:\n\nLet’s try simplifying a more complicated one:\n\n3 2 3\n\n3 2 3\n\n3 8 3\n\nAnother example to simplify:\n\n4a b\n5 12\n27a b\n3a b\n3a b\n\nYour turn:\n16a b\n\n[you get\n4a b ]\n9 2\nThe cubed root of 27 is 3. When you take the\nroot of an exponent the denominator is the root\nand the power is the numerator so 2 is to the\n9/3 power and 3 is to the 3/3 power. Simplify,\nand you get 72.",
+      "source_spans": [
+        {
+          "page_number": 29,
+          "start_offset": 901,
+          "end_offset": 1110
+        },
+        {
+          "page_number": 29,
+          "start_offset": 1111,
+          "end_offset": 1192
+        },
+        {
+          "page_number": 29,
+          "start_offset": 1192,
+          "end_offset": 1230
+        },
+        {
+          "page_number": 30,
+          "start_offset": 0,
+          "end_offset": 22
+        },
+        {
+          "page_number": 30,
+          "start_offset": 23,
+          "end_offset": 135
+        },
+        {
+          "page_number": 30,
+          "start_offset": 136,
+          "end_offset": 247
+        },
+        {
+          "page_number": 30,
+          "start_offset": 248,
+          "end_offset": 294
+        },
+        {
+          "page_number": 30,
+          "start_offset": 295,
+          "end_offset": 301
+        },
+        {
+          "page_number": 30,
+          "start_offset": 302,
+          "end_offset": 308
+        },
+        {
+          "page_number": 30,
+          "start_offset": 309,
+          "end_offset": 315
+        },
+        {
+          "page_number": 30,
+          "start_offset": 316,
+          "end_offset": 345
+        },
+        {
+          "page_number": 30,
+          "start_offset": 346,
+          "end_offset": 372
+        },
+        {
+          "page_number": 30,
+          "start_offset": 373,
+          "end_offset": 390
+        },
+        {
+          "page_number": 30,
+          "start_offset": 391,
+          "end_offset": 612
+        }
+      ]
+    },
+    {
+      "chunk_id": "chunk-33",
+      "page_start": 30,
+      "page_end": 31,
+      "section_heading": "Solving Radical Equations",
+      "chunk_kind": "equation_group",
+      "text": "[you get\n4a b ]\n9 2\nThe cubed root of 27 is 3. When you take the\nroot of an exponent the denominator is the root\nand the power is the numerator so 2 is to the\n9/3 power and 3 is to the 3/3 power. Simplify,\nand you get 72.\n\nSolving Radical Equations\n\nWhen solving radical equations we raise both sides of the equation to the\npower of the radical, but before we do that we need to get the radical on one\nside of the equation by itself. It is also important that we check our\nsolution to make sure that it exists in our domain (that is, make certain our\nsolution does not make our radical undefined).\n\nFor example:\n\nCheck:\n\nMore practice:\n\n3 2\n\n3 2\n\n2x = 124\n\nx = 62\n\nCheck:\n\n3 2 62 1\n\nYour turn: 3\n\n[you get y=5]\nIf we square both sides\nBEFORE we isolated the\nradical we would need to\nfoil the product…It is\nmuch easier if we move\neverything first \nLet’s get the radical on\none side first. Then\nwe will cube both\nsides of the equation\nand solve for x.\n\nChecking our solution\nto make sure that it is\nin our domain…",
+      "source_spans": [
+        {
+          "page_number": 30,
+          "start_offset": 391,
+          "end_offset": 612
+        },
+        {
+          "page_number": 31,
+          "start_offset": 0,
+          "end_offset": 26
+        },
+        {
+          "page_number": 31,
+          "start_offset": 27,
+          "end_offset": 375
+        },
+        {
+          "page_number": 31,
+          "start_offset": 376,
+          "end_offset": 389
+        },
+        {
+          "page_number": 31,
+          "start_offset": 390,
+          "end_offset": 397
+        },
+        {
+          "page_number": 31,
+          "start_offset": 398,
+          "end_offset": 413
+        },
+        {
+          "page_number": 31,
+          "start_offset": 414,
+          "end_offset": 418
+        },
+        {
+          "page_number": 31,
+          "start_offset": 419,
+          "end_offset": 423
+        },
+        {
+          "page_number": 31,
+          "start_offset": 424,
+          "end_offset": 433
+        },
+        {
+          "page_number": 31,
+          "start_offset": 434,
+          "end_offset": 441
+        },
+        {
+          "page_number": 31,
+          "start_offset": 442,
+          "end_offset": 449
+        },
+        {
+          "page_number": 31,
+          "start_offset": 450,
+          "end_offset": 459
+        },
+        {
+          "page_number": 31,
+          "start_offset": 460,
+          "end_offset": 473
+        },
+        {
+          "page_number": 31,
+          "start_offset": 474,
+          "end_offset": 728
+        },
+        {
+          "page_number": 31,
+          "start_offset": 729,
+          "end_offset": 789
+        }
+      ]
+    }
+  ]
+}

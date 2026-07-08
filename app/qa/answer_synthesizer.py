@@ -35,7 +35,7 @@ def synthesize_answer(
         str: Generated answer from the LLM.
     """
     context = "\n\n".join(
-        f"[Chunk {i + 1} | Page {m.page_number}]\n{m.text.strip()}"
+        f"[Chunk {i + 1} | {m.section_heading} | {_format_page_label(m.page_start, m.page_end)} | {m.chunk_kind}]\n{m.text.strip()}"
         for i, m in enumerate(matches)
     )
     history_lines: list[str] = []
@@ -58,3 +58,10 @@ def synthesize_answer(
     llm = BedrockLLMService()
     logger.info("Sending question to LLM | model_id=%s | chunks=%s", llm.model_id, len(matches))
     return llm.generate(prompt)
+
+
+def _format_page_label(page_start: int, page_end: int) -> str:
+    """Format a page label for prompt context."""
+    if page_start == page_end:
+        return f"Page {page_start}"
+    return f"Pages {page_start}-{page_end}"
