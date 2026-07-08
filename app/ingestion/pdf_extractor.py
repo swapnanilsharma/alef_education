@@ -26,10 +26,18 @@ def extract_pdf_pagewise_from_bytes(
     Returns:
         ExtractedPdf: Structured page-wise extraction result.
     """
-    logger.info("Starting PDF extraction from bytes | source_name=%s | size_bytes=%s", source_name, len(pdf_bytes))
+    logger.info(
+        "Starting PDF extraction from bytes | source_name=%s | size_bytes=%s",
+        source_name,
+        len(pdf_bytes),
+    )
     with fitz.open(stream=pdf_bytes, filetype="pdf") as document:
         pages: list[PageData] = []
-        logger.debug("Opened PDF document | source_name=%s | total_pages=%s", source_name, len(document))
+        logger.debug(
+            "Opened PDF document | source_name=%s | total_pages=%s",
+            source_name,
+            len(document),
+        )
         for page_index, page in enumerate(document, start=1):
             raw_text = page.get_text("text").strip()
             cleaned_text = clean_page_text(raw_text)
@@ -40,9 +48,15 @@ def extract_pdf_pagewise_from_bytes(
                 len(raw_text),
                 len(cleaned_text),
             )
-            pages.append(PageData(page_number=page_index, raw_text=raw_text, text=cleaned_text))
+            pages.append(
+                PageData(page_number=page_index, raw_text=raw_text, text=cleaned_text)
+            )
 
-    logger.info("Completed PDF extraction | source_name=%s | total_pages=%s", source_name, len(pages))
+    logger.info(
+        "Completed PDF extraction | source_name=%s | total_pages=%s",
+        source_name,
+        len(pages),
+    )
     return ExtractedPdf(source_pdf=source_name, total_pages=len(pages), pages=pages)
 
 

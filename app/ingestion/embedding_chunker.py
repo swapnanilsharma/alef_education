@@ -8,7 +8,14 @@ import re
 from app.core.config import CHUNK_MAX_CHARS, CHUNK_OVERLAP, CHUNK_TARGET_CHARS
 from app.core.schemas import ChunkSourceSpan, EmbeddingChunk, ExtractedPdf
 
-_EXAMPLE_PREFIXES = ("for example", "example", "let’s try", "let's try", "solve:", "simplify:")
+_EXAMPLE_PREFIXES = (
+    "for example",
+    "example",
+    "let’s try",
+    "let's try",
+    "solve:",
+    "simplify:",
+)
 _PRACTICE_PREFIXES = ("your turn", "now you try", "practice")
 _GENERIC_NON_SECTION_HEADINGS = {
     "equation",
@@ -53,7 +60,9 @@ def build_embedding_chunks(
     if not blocks:
         return []
 
-    return _pack_blocks_into_chunks(blocks, target_chars=target_chars, max_chars=max_chars, overlap=overlap)
+    return _pack_blocks_into_chunks(
+        blocks, target_chars=target_chars, max_chars=max_chars, overlap=overlap
+    )
 
 
 def _build_semantic_blocks(extracted_pdf: ExtractedPdf) -> list[_SemanticBlock]:
@@ -148,7 +157,9 @@ def _pack_blocks_into_chunks(
     current_chars = 0
 
     for block in blocks:
-        if current_blocks and _should_flush_before_block(current_blocks, block, current_chars, target_chars, max_chars):
+        if current_blocks and _should_flush_before_block(
+            current_blocks, block, current_chars, target_chars, max_chars
+        ):
             chunks.append(_make_chunk(len(chunks) + 1, current_blocks))
             current_blocks = _select_overlap_blocks(current_blocks, overlap)
             current_chars = _blocks_char_count(current_blocks)
@@ -184,16 +195,27 @@ def _should_flush_before_block(
     if next_block.block_kind == "heading":
         return True
 
-    if next_block.section_heading != current_blocks[-1].section_heading and current_chars >= target_chars:
+    if (
+        next_block.section_heading != current_blocks[-1].section_heading
+        and current_chars >= target_chars
+    ):
         return True
 
-    if next_block.block_kind in {"worked_example", "practice"} and current_chars >= target_chars:
+    if (
+        next_block.block_kind in {"worked_example", "practice"}
+        and current_chars >= target_chars
+    ):
         return True
 
-    return current_chars >= target_chars and current_blocks[-1].block_kind == "equation_group"
+    return (
+        current_chars >= target_chars
+        and current_blocks[-1].block_kind == "equation_group"
+    )
 
 
-def _select_overlap_blocks(blocks: list[_SemanticBlock], overlap: int) -> list[_SemanticBlock]:
+def _select_overlap_blocks(
+    blocks: list[_SemanticBlock], overlap: int
+) -> list[_SemanticBlock]:
     """Carry a small trailing semantic overlap into the next chunk."""
     if overlap <= 0 or not blocks:
         return []
@@ -215,10 +237,16 @@ def _make_chunk(chunk_number: int, blocks: list[_SemanticBlock]) -> EmbeddingChu
     page_start = min(block.page_number for block in blocks)
     page_end = max(block.page_number for block in blocks)
     section_heading = next(
-        (block.section_heading for block in reversed(blocks) if block.section_heading != "Unknown section"),
+        (
+            block.section_heading
+            for block in reversed(blocks)
+            if block.section_heading != "Unknown section"
+        ),
         "Unknown section",
     )
-    primary_block = next((block for block in blocks if block.block_kind != "heading"), blocks[0])
+    primary_block = next(
+        (block for block in blocks if block.block_kind != "heading"), blocks[0]
+    )
     source_spans = [
         ChunkSourceSpan(
             page_number=block.page_number,
@@ -264,7 +292,11 @@ def _classify_block(lines: list[str]) -> str:
 
 def _starts_strong_boundary(line: str) -> bool:
     """Return whether a line strongly indicates a new semantic block."""
-    return _is_section_heading(line) or _has_prefix(line, _EXAMPLE_PREFIXES) or _has_prefix(line, _PRACTICE_PREFIXES)
+    return (
+        _is_section_heading(line)
+        or _has_prefix(line, _EXAMPLE_PREFIXES)
+        or _has_prefix(line, _PRACTICE_PREFIXES)
+    )
 
 
 def _looks_like_equation_group(lines: list[str]) -> bool:

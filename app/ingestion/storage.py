@@ -19,7 +19,9 @@ def sanitize_name(base_name: str) -> str:
     Returns:
         str: Sanitized artifact name suitable for local file paths.
     """
-    return "".join(char if char.isalnum() or char in {"-", "_"} else "_" for char in base_name)
+    return "".join(
+        char if char.isalnum() or char in {"-", "_"} else "_" for char in base_name
+    )
 
 
 def build_output_path(output_dir: Path, base_name: str) -> Path:

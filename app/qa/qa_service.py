@@ -27,5 +27,3 @@ def answer_question(request: AskRequest, request_id: str) -> AskResponse:
         request.grade_level,
     )
     return run_qa_graph(request, request_id)
-
-

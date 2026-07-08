@@ -63,13 +63,20 @@ def evaluate(extracted_json_path: Path, show_examples: int) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Evaluate chunking output for extracted PDF JSON")
+    """
+    Command-line entry point for chunking evaluation.
+    """
+    parser = argparse.ArgumentParser(
+        description="Evaluate chunking output for extracted PDF JSON"
+    )
     parser.add_argument(
         "extracted_json",
         type=Path,
         help="Path to extracted JSON payload (for example outputs/<file>.json)",
     )
-    parser.add_argument("--show-examples", type=int, default=10, help="Number of sample chunks to print")
+    parser.add_argument(
+        "--show-examples", type=int, default=10, help="Number of sample chunks to print"
+    )
     args = parser.parse_args()
     return evaluate(args.extracted_json, args.show_examples)
 

@@ -104,7 +104,9 @@ def resolve_vectorstore_paths(
     if index_path:
         resolved_index_path = Path(index_path)
     else:
-        candidates = sorted(VECTOR_STORE_DIR.glob("*.faiss"), key=lambda path: path.stat().st_mtime)
+        candidates = sorted(
+            VECTOR_STORE_DIR.glob("*.faiss"), key=lambda path: path.stat().st_mtime
+        )
         if not candidates:
             raise FileNotFoundError("No FAISS index found in vectorstores directory.")
         resolved_index_path = candidates[-1]
@@ -177,5 +179,9 @@ def search_faiss_index(
             )
         )
 
-    logger.info("FAISS search completed | index_path=%s | match_count=%s", index_path, len(matches))
+    logger.info(
+        "FAISS search completed | index_path=%s | match_count=%s",
+        index_path,
+        len(matches),
+    )
     return matches, metadata

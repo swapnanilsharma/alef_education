@@ -45,7 +45,9 @@ def synthesize_answer(
             f"A: {turn.get('answer', '')}\n"
             f"Status: {turn.get('safety_status', '')}"
         )
-    history = "\n\n".join(history_lines) if history_lines else "No prior session context."
+    history = (
+        "\n\n".join(history_lines) if history_lines else "No prior session context."
+    )
 
     prompt = (
         f"{_SYSTEM_PROMPT}\n\n"
@@ -56,7 +58,9 @@ def synthesize_answer(
         f"Answer:"
     )
     llm = BedrockLLMService()
-    logger.info("Sending question to LLM | model_id=%s | chunks=%s", llm.model_id, len(matches))
+    logger.info(
+        "Sending question to LLM | model_id=%s | chunks=%s", llm.model_id, len(matches)
+    )
     return llm.generate(prompt)
 
 

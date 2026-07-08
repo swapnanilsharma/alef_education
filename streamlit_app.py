@@ -42,7 +42,9 @@ def call_ingest(base_url: str, pdf_name: str, pdf_bytes: bytes) -> dict[str, Any
     return response.json()
 
 
-def call_ask(base_url: str, student_id: str, question: str, grade_level: str) -> dict[str, Any]:
+def call_ask(
+    base_url: str, student_id: str, question: str, grade_level: str
+) -> dict[str, Any]:
     """Send a student question to the backend ask endpoint.
 
     Args:
@@ -118,7 +120,15 @@ def main() -> None:
         default_student_id = st.text_input("Student ID", value="student-123")
         default_grade = st.selectbox(
             "Grade Level",
-            options=["grade_6", "grade_7", "grade_8", "grade_9", "grade_10", "grade_11", "grade_12"],
+            options=[
+                "grade_6",
+                "grade_7",
+                "grade_8",
+                "grade_9",
+                "grade_10",
+                "grade_11",
+                "grade_12",
+            ],
             index=2,
         )
 
@@ -137,7 +147,9 @@ def main() -> None:
     with tab_ingest:
         st.subheader("Ingest PDF")
         uploaded = st.file_uploader("Choose a PDF", type=["pdf"])
-        ingest_clicked = st.button("Send to /ingest", type="primary", disabled=uploaded is None)
+        ingest_clicked = st.button(
+            "Send to /ingest", type="primary", disabled=uploaded is None
+        )
 
         if ingest_clicked and uploaded is not None:
             with st.spinner("Ingesting PDF and building embeddings..."):
@@ -157,10 +169,28 @@ def main() -> None:
             student_id = st.text_input("Student ID", value=default_student_id)
             grade_level = st.selectbox(
                 "Grade Level",
-                options=["grade_6", "grade_7", "grade_8", "grade_9", "grade_10", "grade_11", "grade_12"],
-                index=["grade_6", "grade_7", "grade_8", "grade_9", "grade_10", "grade_11", "grade_12"].index(default_grade),
+                options=[
+                    "grade_6",
+                    "grade_7",
+                    "grade_8",
+                    "grade_9",
+                    "grade_10",
+                    "grade_11",
+                    "grade_12",
+                ],
+                index=[
+                    "grade_6",
+                    "grade_7",
+                    "grade_8",
+                    "grade_9",
+                    "grade_10",
+                    "grade_11",
+                    "grade_12",
+                ].index(default_grade),
             )
-            question = st.text_area("Question", placeholder="How do I solve 4x - 7 = 21?", height=120)
+            question = st.text_area(
+                "Question", placeholder="How do I solve 4x - 7 = 21?", height=120
+            )
             submitted = st.form_submit_button("Send to /ask", type="primary")
 
         if submitted:
@@ -169,7 +199,9 @@ def main() -> None:
             else:
                 with st.spinner("Generating answer..."):
                     try:
-                        payload = call_ask(base_url, student_id.strip(), question.strip(), grade_level)
+                        payload = call_ask(
+                            base_url, student_id.strip(), question.strip(), grade_level
+                        )
                         st.session_state.ask_history.insert(0, payload)
                         st.success("Answer received")
 
@@ -178,13 +210,17 @@ def main() -> None:
 
                         col1, col2 = st.columns(2)
                         with col1:
-                            st.metric("Safety Status", payload.get("safety_status", "unknown"))
+                            st.metric(
+                                "Safety Status", payload.get("safety_status", "unknown")
+                            )
                         with col2:
                             st.caption(f"Request ID: {payload.get('request_id', '')}")
 
                         show_sources(payload.get("sources", []))
                     except requests.HTTPError as exc:
-                        detail = exc.response.text if exc.response is not None else str(exc)
+                        detail = (
+                            exc.response.text if exc.response is not None else str(exc)
+                        )
                         st.error(f"Ask failed: {detail}")
                     except requests.RequestException as exc:
                         st.error(f"Ask failed: {exc}")

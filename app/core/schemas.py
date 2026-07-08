@@ -10,7 +10,9 @@ class PageData(BaseModel):
 
     page_number: int = Field(description="1-based page number in the source PDF.")
     raw_text: str = Field(description="Raw text extracted directly from the PDF page.")
-    text: str = Field(description="Noise-filtered text optimized for downstream embeddings.")
+    text: str = Field(
+        description="Noise-filtered text optimized for downstream embeddings."
+    )
 
 
 class ExtractedPdf(BaseModel):
@@ -37,28 +39,46 @@ class ChunkSourceSpan(BaseModel):
     """Source span contributing text from a single page into a chunk."""
 
     page_number: int = Field(description="1-based page number in the source PDF.")
-    start_offset: int = Field(description="Start character offset in the cleaned page text.")
-    end_offset: int = Field(description="End character offset in the cleaned page text.")
+    start_offset: int = Field(
+        description="Start character offset in the cleaned page text."
+    )
+    end_offset: int = Field(
+        description="End character offset in the cleaned page text."
+    )
 
 
 class EmbeddingChunk(BaseModel):
     """Chunk of cleaned PDF text prepared for embedding and retrieval."""
 
     chunk_id: str = Field(description="Unique identifier for the embedding chunk.")
-    page_start: int = Field(description="First page number contributing text to the chunk.")
-    page_end: int = Field(description="Last page number contributing text to the chunk.")
-    section_heading: str = Field(description="Best-effort section heading inferred for the chunk.")
-    chunk_kind: str = Field(description="Primary semantic kind of the chunk, such as paragraph or practice.")
+    page_start: int = Field(
+        description="First page number contributing text to the chunk."
+    )
+    page_end: int = Field(
+        description="Last page number contributing text to the chunk."
+    )
+    section_heading: str = Field(
+        description="Best-effort section heading inferred for the chunk."
+    )
+    chunk_kind: str = Field(
+        description="Primary semantic kind of the chunk, such as paragraph or practice."
+    )
     text: str = Field(description="Clean text content used to generate the embedding.")
-    source_spans: list[ChunkSourceSpan] = Field(description="Per-page source spans contributing to the chunk.")
+    source_spans: list[ChunkSourceSpan] = Field(
+        description="Per-page source spans contributing to the chunk."
+    )
 
 
 class AskRequest(BaseModel):
     """Student question payload accepted by the ask API."""
 
     student_id: str = Field(description="Unique identifier for the student.")
-    question: str = Field(description="Natural-language question to ask against the local vectorstore.")
-    grade_level: str = Field(description="Grade level of the student (e.g., 'grade_8').")
+    question: str = Field(
+        description="Natural-language question to ask against the local vectorstore."
+    )
+    grade_level: str = Field(
+        description="Grade level of the student (e.g., 'grade_8')."
+    )
 
 
 class AskMatch(BaseModel):
@@ -78,9 +98,15 @@ class AskSource(BaseModel):
 
     source_id: str
     title: str
-    page: int = Field(description="Starting page number; equals page_start. Preserved for backward compatibility.")
-    page_start: int = Field(description="First page number contributing text to this source chunk.")
-    page_end: int = Field(description="Last page number contributing text to this source chunk.")
+    page: int = Field(
+        description="Starting page number; equals page_start. Preserved for backward compatibility."
+    )
+    page_start: int = Field(
+        description="First page number contributing text to this source chunk."
+    )
+    page_end: int = Field(
+        description="Last page number contributing text to this source chunk."
+    )
     excerpt: str
 
 

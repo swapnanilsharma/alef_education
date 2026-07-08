@@ -8,6 +8,7 @@ import logging
 import boto3
 
 from app.core.config import EMBEDDING_MODEL_ID, LLM_MAX_TOKENS, LLM_MODEL_ID
+
 logger = logging.getLogger(__name__)
 
 
@@ -33,7 +34,11 @@ class BedrockEmbeddingService:
         Returns:
             list[list[float]]: Embedding vector per input text, preserving order.
         """
-        logger.info("Embedding batch requested | model_id=%s | batch_size=%s", self.model_id, len(texts))
+        logger.info(
+            "Embedding batch requested | model_id=%s | batch_size=%s",
+            self.model_id,
+            len(texts),
+        )
         return [self.embed_text(text) for text in texts]
 
     def embed_text(self, text: str) -> list[float]:
@@ -48,7 +53,11 @@ class BedrockEmbeddingService:
         Raises:
             ValueError: If the Bedrock response does not include an embedding vector.
         """
-        logger.debug("Embedding single text | model_id=%s | char_count=%s", self.model_id, len(text))
+        logger.debug(
+            "Embedding single text | model_id=%s | char_count=%s",
+            self.model_id,
+            len(text),
+        )
         request_body = json.dumps({"inputText": text})
         response = self.client.invoke_model(
             modelId=self.model_id,
@@ -59,14 +68,22 @@ class BedrockEmbeddingService:
         payload = json.loads(response["body"].read())
 
         if "embedding" in payload:
-            logger.debug("Received embedding response | model_id=%s | dimension=%s", self.model_id, len(payload["embedding"]))
+            logger.debug(
+                "Received embedding response | model_id=%s | dimension=%s",
+                self.model_id,
+                len(payload["embedding"]),
+            )
             return payload["embedding"]
 
         embeddings_by_type = payload.get("embeddingsByType", {})
         if isinstance(embeddings_by_type, dict):
             float_embedding = embeddings_by_type.get("float")
             if float_embedding:
-                logger.debug("Received float embedding response | model_id=%s | dimension=%s", self.model_id, len(float_embedding))
+                logger.debug(
+                    "Received float embedding response | model_id=%s | dimension=%s",
+                    self.model_id,
+                    len(float_embedding),
+                )
                 return float_embedding
 
         raise ValueError("Bedrock response did not include an embedding vector.")
@@ -97,11 +114,17 @@ class BedrockLLMService:
         Raises:
             ValueError: If the response contains no content.
         """
-        logger.debug("LLM generate requested | model_id=%s | prompt_chars=%s", self.model_id, len(prompt))
-        request_body = json.dumps({
-            "messages": [{"role": "user", "content": [{"text": prompt}]}],
-            "inferenceConfig": {"maxTokens": LLM_MAX_TOKENS},
-        })
+        logger.debug(
+            "LLM generate requested | model_id=%s | prompt_chars=%s",
+            self.model_id,
+            len(prompt),
+        )
+        request_body = json.dumps(
+            {
+                "messages": [{"role": "user", "content": [{"text": prompt}]}],
+                "inferenceConfig": {"maxTokens": LLM_MAX_TOKENS},
+            }
+        )
         response = self.client.invoke_model(
             modelId=self.model_id,
             contentType="application/json",

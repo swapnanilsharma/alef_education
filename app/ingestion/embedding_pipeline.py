@@ -9,6 +9,7 @@ from app.core.config import VECTOR_STORE_DIR
 from app.ingestion.embedding_chunker import build_embedding_chunks
 from app.core.schemas import ExtractedPdf
 from app.retrieval.vector_store import save_faiss_index
+
 logger = logging.getLogger(__name__)
 
 
@@ -42,7 +43,11 @@ def build_embeddings_from_extracted_pdf(
     if not chunks:
         raise ValueError("No cleaned text was available to create embeddings.")
 
-    logger.info("Chunking completed | source_json=%s | chunk_count=%s", source_json_path, len(chunks))
+    logger.info(
+        "Chunking completed | source_json=%s | chunk_count=%s",
+        source_json_path,
+        len(chunks),
+    )
 
     embedder = embedding_service or BedrockEmbeddingService()
     logger.info(
