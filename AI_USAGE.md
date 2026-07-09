@@ -1,45 +1,71 @@
-# AI Usage
+# AI Usage Summary
+
+## Overview
+I used AI coding assistance to accelerate implementation while keeping engineering decisions and final quality control manual. The workflow was consistent throughout the project:
+
+1. inspect the existing code and requirements,
+2. ask AI to propose implementation options,
+3. review each proposal critically,
+4. accept only changes that matched functional and compatibility requirements,
+5. verify behavior with local checks and sample runs.
+
+AI was most helpful for iteration speed, especially when refining chunking and source attribution.
 
 ## AI Tools Used
-- GitHub Copilot Chat (GPT-5.3-Codex) in VS Code.
+- GitHub Copilot Chat in VS Code.
 
 ## What I Asked AI To Do
-- Review current retrieval/chunking quality.
-- Propose and implement semantic chunking improvements.
-- Preserve page source attribution when chunks span multiple pages.
-- Update retrieval/source formatting and UI compatibility.
-- Validate syntax and run local smoke tests.
+- review current chunking and retrieval behavior,
+- propose and implement semantic chunking improvements,
+- preserve page-source attribution when chunks span pages,
+- update retrieval, response formatting, and UI compatibility,
+- draft architecture and usage documentation,
+- generate a local chunking evaluation script.
 
 ## What I Accepted
-- Moving from page-local chunking to semantic block packing.
-- Adding page-range metadata (`page_start`, `page_end`) and `source_spans`.
-- Updating source rendering to support page ranges.
-- Lowering chunk target/overlap defaults for better retrieval precision.
+- moving from page-local chunking to semantic block packing,
+- adding chunk provenance fields (`page_start`, `page_end`, `source_spans`),
+- keeping `page` in API responses for backward compatibility,
+- reducing chunk size/overlap defaults for better retrieval precision,
+- adding a deterministic local evaluation script for chunk metadata checks.
 
 ## What I Rejected or Adjusted
-- Initial heading heuristics that produced weak section titles (for example, generic labels like "Equation" or table-of-contents entries).
-- A source schema variant where `page` could be `null`; this was adjusted to keep backward compatibility for clients expecting an integer page.
+- early heading heuristics that produced weak titles (for example generic labels and table-of-contents artifacts),
+- an early response shape where `page` could be null,
+- wording in draft documentation that was too implementation-heavy for an interview submission.
 
-## Example of Wrong/Incomplete AI Output
-- Early AI-generated heading inference overfit textbook noise and produced unhelpful section titles.
-- Early AI change set `AskSource.page` to nullable for range citations, which risked breaking clients that expected `page` to always exist.
+## Example of Incorrect or Incomplete AI Output
+One meaningful correction was in source response compatibility.
 
-How it was corrected:
-- Tightened heading detection rules and excluded generic/toC-like headings.
-- Restored `page` as a required integer while adding `page_start`/`page_end` for richer attribution.
+AI initially suggested making `page` nullable and using only `page_start`/`page_end` for range citations. That was structurally valid but risky for clients expecting `page` to always be present.
 
-## How Final Implementation Was Verified
-- Compiled affected modules with `python -m py_compile`.
-- Ran chunking smoke test on a real extracted JSON artifact.
-- Checked generated chunk metadata for:
+I corrected this by:
+- keeping `page` required,
+- setting `page = page_start`,
+- adding `page_start` and `page_end` as richer metadata for range-aware clients.
+
+Another correction was heading inference. Early heuristic output overfit textbook noise and produced low-value section titles. I tightened heading rules and excluded generic or table-of-contents style headings.
+
+## How I Verified the Final Implementation
+- compiled affected modules with `python -m py_compile`,
+- executed the chunking evaluation script on a real extracted JSON artifact,
+- reviewed sample chunk outputs for:
   - valid page ranges,
-  - non-empty text,
-  - source spans,
-  - improved chunk count versus page-level baseline.
+  - non-empty chunk text,
+  - populated source spans,
+  - expected cross-page chunk behavior,
+  - improved chunk granularity versus page-level baseline,
+- manually inspected the ask response path to confirm backward-compatible source fields.
 
 ## What I Would Improve With More Time
-- Add deterministic mock mode for full `/ask` E2E tests without external LLM keys.
-- Add hybrid retrieval and optional reranking.
-- Improve heading detection with document-structure signals beyond simple heuristics.
-- Add regression tests for source attribution and citation formatting.
-- Add a small benchmark suite for retrieval quality across representative textbook queries.
+- add deterministic mock mode for full `/ask` end-to-end tests without external LLM dependencies,
+- add authentication and authorization (for example JWT-based API auth with role-based access),
+- add keyword-search retrieval (for example BM25) and combine it with vector search as a hybrid approach,
+- add hybrid retrieval and optional reranking,
+- add regression tests specifically for citation formatting and source attribution,
+- add a retrieval benchmark set with representative textbook queries,
+- improve section detection with stronger document-structure signals,
+- capture clearer before/after retrieval quality metrics.
+
+## Final Assessment
+AI improved development velocity and idea exploration, but correctness depended on manual review, targeted corrections, and validation. The best value came from using AI as an accelerator, not as an autonomous decision-maker.

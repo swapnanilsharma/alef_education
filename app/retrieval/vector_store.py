@@ -16,6 +16,16 @@ from app.ingestion.storage import build_artifact_stem, load_json_file, save_json
 logger = logging.getLogger(__name__)
 
 
+def _add_vectors_to_index(index: Any, vector_array: np.ndarray) -> None:
+    """Add vectors to a FAISS index.
+
+    FAISS Python stubs are inconsistent across versions and can produce
+    false-positive call-signature diagnostics for `index.add(...)`.
+    Keeping the call behind an `Any`-typed helper preserves runtime behavior.
+    """
+    index.add(vector_array)
+
+
 def save_faiss_index(
     chunks: list[EmbeddingChunk],
     embeddings: list[list[float]],
@@ -53,8 +63,8 @@ def save_faiss_index(
     vector_array = np.ascontiguousarray(np.asarray(embeddings, dtype="float32"))
     faiss.normalize_L2(x=vector_array)
 
-    index: Any = faiss.IndexFlatIP(vector_array.shape[1])
-    index.add(vector_array)
+    index = faiss.IndexFlatIP(vector_array.shape[1])
+    _add_vectors_to_index(index, vector_array)
 
     artifact_stem = build_artifact_stem(output_dir, base_name)
     index_path = artifact_stem.with_suffix(".faiss")
